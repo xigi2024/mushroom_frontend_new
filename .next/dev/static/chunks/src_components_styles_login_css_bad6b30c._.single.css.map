@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/styles/login.css"],"sourcesContent":[".login-container {  \r\n    max-width: 1000px;\r\n  }\r\n  .login-card {\r\n    background: #fff;\r\n    border-radius: 12px;\r\n    overflow: hidden;\r\n    max-width: 1000px;\r\n    margin: 0 auto;\r\n\r\n  }\r\n  .login-left {\r\n    background-color: #f8f9fa;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    padding: 0px;\r\n  }\r\n  \r\n  .login-right {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n  }\r\n  \r\n  .login-icon {\r\n    position: absolute;\r\n    margin-left: 10px;\r\n    top: 10px;\r\n    color: #999;\r\n  }\r\n  \r\n  .login-input-group {\r\n    position: relative;\r\n  }\r\n  \r\n  .farmer-login-btn {\r\n    width: 100%;\r\n    background-color: #007bff;\r\n    color: white;\r\n    padding: 10px;\r\n    border: none;\r\n    border-radius: 5px;\r\n  }\r\n  \r\n .login-image{\r\n  height: 550px;\r\n }\r\n @media (max-width: 767px) {\r\n\r\n  .login-image{\r\n  height: 300px;\r\n  object-fit: cover;\r\n }\r\n}"],"names":[],"mappings":"AAAA;;;;AAGE;;;;;;;;AAQA;;;;;;;;AAQA;;;;;;AAMA;;;;;;;AAOA;;;;AAIA;;;;;;;;;AASD;;;;AAGA;EAEC"}}]
+}

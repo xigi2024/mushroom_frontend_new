@@ -1,0 +1,89 @@
+/* [project]/src/components/styles/contact.css [app-client] (css) */
+.hero-section {
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  display: flex;
+}
+
+.contact-section {
+  background-color: #f1fff0;
+  padding: 60px 0;
+}
+
+.contact-form {
+  background: #fff;
+  border-radius: 10px;
+  height: 100%;
+  padding: 40px;
+  box-shadow: 0 5px 15px #0000001a;
+}
+
+.contact-icon {
+  background: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  box-shadow: 0 2px 6px #0000001a;
+}
+
+.contact-icon, .social-icons a svg {
+  font-size: 20px;
+}
+
+.social-icons a {
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  box-shadow: 0 2px 6px #0000001a;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 .2rem #28a74540;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  padding: 10px 30px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.map-container {
+  border-radius: 10px;
+  height: 450px;
+  margin-top: 40px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #0000001a;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  opacity: .9;
+  font-size: 1.2rem;
+}
+
+.form-label {
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=src_components_styles_contact_d919be3b.css.map*/

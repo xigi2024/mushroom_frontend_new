@@ -1,0 +1,59 @@
+/* [project]/src/components/styles/login.css [app-client] (css) */
+.login-container {
+  max-width: 1000px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.login-left {
+  background-color: #f8f9fa;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  display: flex;
+}
+
+.login-right {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.login-icon {
+  color: #999;
+  margin-left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.login-input-group {
+  position: relative;
+}
+
+.farmer-login-btn {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.login-image {
+  height: 550px;
+}
+
+@media (max-width: 767px) {
+  .login-image {
+    object-fit: cover;
+    height: 300px;
+  }
+}
+
+/*# sourceMappingURL=src_components_styles_login_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/mycomatrix/mushroom%20frontend/src/app/product/%5BcategoryId%5D/%5BproductId%5D/page.tsx"],"sourcesContent":["import ProductDetail from '../../../components/pages/ProductDetail';\r\n\r\nexport default function ProductDetailPage({ params }) {\r\n    return <ProductDetail categoryId={params.categoryId} productId={params.productId} />;\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS,kBAAkB,EAAE,MAAM,EAAE;IAChD,qBAAO,8OAAC;QAAc,YAAY,OAAO,UAAU;QAAE,WAAW,OAAO,SAAS;;;;;;AACpF"}}]
+}

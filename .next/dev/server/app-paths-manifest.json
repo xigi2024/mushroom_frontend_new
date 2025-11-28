@@ -1,0 +1,13 @@
+{
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/product/[categoryId]/[productId]/page": "app/product/[categoryId]/[productId]/page.js",
+  "/products/[id]/page": "app/products/[id]/page.js",
+  "/products/page": "app/products/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/room/[roomId]/page": "app/room/[roomId]/page.js",
+  "/user-dashboard/page": "app/user-dashboard/page.js",
+  "/user-payments/page": "app/user-payments/page.js",
+  "/user/iot-monitoring/page": "app/user/iot-monitoring/page.js",
+  "/user/product-order/page": "app/user/product-order/page.js"
+}

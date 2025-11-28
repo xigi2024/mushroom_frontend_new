@@ -1,0 +1,96 @@
+/* [project]/src/index.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, span, .accordion-button {
+  font-family: Poppins, sans-serif !important;
+}
+
+p, li, ul, .nav-link, .btn, a, .accordion-body {
+  color: #4d4d4d;
+  font-family: Outfit, sans-serif !important;
+}
+
+.breadcrumb-item a, .breadcrumb-item a:link, .breadcrumb-item a:visited, .breadcrumb-item a:hover, .breadcrumb-item a:focus, .breadcrumb-item a:active, .breadcrumb-item.text-decoration-none a, .breadcrumb-item.text-decoration-none a:hover, .breadcrumb-item.text-decoration-none a:focus {
+  text-decoration: none !important;
+}
+
+.breadcrumb-item.color a, .breadcrumb-item.color a:link, .breadcrumb-item.color a:visited, .breadcrumb-item.color a:active {
+  color: #15640d !important;
+}
+
+.breadcrumb-item.color a:hover, .breadcrumb-item.color a:focus {
+  color: #0a6e01 !important;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #0b8001;
+}
+
+.color {
+  color: #15640d;
+}
+
+.button, .btn.button, button.button {
+  cursor: pointer;
+  transition: background-color .3s, color .3s, border .3s;
+  color: #fff !important;
+  box-shadow: none !important;
+  background-color: #0b8001 !important;
+  border: 1px solid #0000 !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-family: Outfit, sans-serif !important;
+  font-size: 16px !important;
+}
+
+.button:hover, .btn.button:hover, button.button:hover {
+  outline: none;
+  color: #0b8001 !important;
+  box-shadow: none !important;
+  background-color: #fff !important;
+  border: 1px solid #0b8001 !important;
+}
+
+.button:focus, .button:active, .btn.button:focus, .btn.button:active, button.button:focus, button.button:active {
+  color: #0b8001 !important;
+  box-shadow: none !important;
+  background-color: #fff !important;
+  border: 1px solid #0b8001 !important;
+  outline: none !important;
+}
+
+@media (max-width: 576px) {
+  .button, .btn.button, button.button {
+    padding: 10px 20px !important;
+    font-size: .85rem !important;
+  }
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.btn-success {
+  color: #fff !important;
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+}
+
+.footer-text {
+  color: #212529;
+}
+
+/*# sourceMappingURL=src_index_css_bad6b30c._.single.css.map*/

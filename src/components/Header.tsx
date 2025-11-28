@@ -1,0 +1,233 @@
+"use client";
+import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Navbar as BSNavbar, Nav, Container, Row, Col, Dropdown } from 'react-bootstrap';
+import { ShoppingCart, Home, Package, Info, Phone, User, LogOut, LayoutDashboard } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
+import "./styles/header.css";
+
+const Header = () => {
+  const { isAuthenticated, user, logout } = useAuth();
+  const { getTotalItems } = useCart();
+  const [showMobileAuth, setShowMobileAuth] = useState(false);
+  const pathname = usePathname();
+
+  const cartItemsCount = getTotalItems();
+
+  const handleLogout = () => {
+    logout();
+    setShowMobileAuth(false);
+  };
+
+  const getUserInitial = () => {
+    if (user?.name) {
+      return user.name.charAt(0).toUpperCase();
+    } else if (user?.email) {
+      return user.email.charAt(0).toUpperCase();
+    }
+    return 'U';
+  };
+
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/products', label: 'Products' },
+    { path: '/about', label: 'About Us' },
+    { path: '/contact', label: 'Contact Us' }
+  ];
+
+  return (
+    <>
+      {/* Top Bar */}
+      <div className="top-bar text-white py-2 small">
+        <Container>
+          <Row className="align-items-center">
+            <Col md={3} className="d-none d-md-block">
+              <div className="d-flex align-items-center top-text">
+                <a href="https://www.instagram.com/myco_matrix_mushroom?utm_source=qr&igsh=YWE2cnNmd3NxNGhw" target="_blank" rel="noopener noreferrer" className="text-white me-3 text-decoration-none">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@mycomatrix" target="_blank" rel="noopener noreferrer" className="text-white me-3 text-decoration-none">
+                  <i className="fab fa-youtube"></i>
+                </a>
+              </div>
+            </Col>
+            <Col md={6} className="text-center">
+              <span className="d-none d-md-inline top-text">Welcome to Myco Matrix</span>
+            </Col>
+            <Col md={3} className="text-end d-none d-md-block">
+              <a href="mailto:mycomatrix1@gmail.com" className="text-white text-decoration-none">
+                <i className="fas fa-envelope me-1"></i>
+                <span className="top-text">mycomatrix1@gmail.com</span>
+              </a>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      {/* Main Navbar */}
+      <BSNavbar bg="white" expand="lg" className="sticky-top main-navbar">
+        <Container>
+          {/* Logo */}
+          <BSNavbar.Brand className="logo-brand">
+            <Link href="/">
+              <img
+                src="/assets/logo.png"
+                alt="MYCO MATRIX"
+                className="img-fluid logo-image"
+              />
+            </Link>
+          </BSNavbar.Brand>
+
+          {/* Desktop Navigation - Center */}
+          <div className="d-none d-lg-flex align-items-center w-100 justify-content-between">
+            <Nav className="ms-auto fw-semibold main-nav">
+              {navLinks.map((link) => {
+                const isActive =
+                  pathname === link.path ||
+                  (link.path !== '/' && pathname?.startsWith(link.path));
+                return (
+                  <Nav.Link
+                    key={link.path}
+                    as={Link}
+                    href={link.path}
+                    className={`nav-link-item ${isActive ? 'active-nav-link' : ''}`}
+                  >
+                    {link.label}
+                  </Nav.Link>
+                );
+              })}
+            </Nav>
+
+            {/* Desktop Right Side Icons */}
+            <div className="d-flex align-items-center gap-4 desktop-icons">
+              <Link href="/cart" className="position-relative text-dark cart-icon" style={{ textDecoration: 'none' }}>
+                <ShoppingCart size={22} />
+                {cartItemsCount > 0 && (
+                  <span className="badges">
+                    {Math.min(cartItemsCount, 99)}
+                    {cartItemsCount > 99 && '+'}
+                  </span>
+                )}
+              </Link>
+
+              {isAuthenticated ? (
+                <Dropdown align="end" className="d-flex align-items-center">
+                  <Dropdown.Toggle
+                    variant="light"
+                    id="user-dropdown"
+                    className="border-0 bg-transparent d-flex align-items-center p-0 user-toggle"
+                  >
+                    <div className="user-avatar">
+                      <span className="user-initial">{getUserInitial()}</span>
+                    </div>
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className="user-dropdown-menu">
+                    <Dropdown.Item as={Link} href="/user-dashboard" className="dropdown-item-custom">
+                      <i className="fas fa-tachometer-alt me-2"></i>
+                      Dashboard
+                    </Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item onClick={handleLogout} className="dropdown-item-custom text-danger">
+                      <i className="fas fa-sign-out-alt me-2"></i>
+                      Logout
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              ) : (
+                <Link href="/login" className="button text-decoration-none">Login / Signup</Link>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile: User Avatar or Login Button */}
+          <div className="d-lg-none">
+            {isAuthenticated ? (
+              <Dropdown align="end" className="d-flex align-items-center">
+                <Dropdown.Toggle
+                  variant="light"
+                  id="mobile-user-dropdown"
+                  className="border-0 bg-transparent d-flex align-items-center p-0 user-toggle"
+                >
+                  <div className="user-avatar">
+                    <span className="user-initial">{getUserInitial()}</span>
+                  </div>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="user-dropdown-menu">
+                  <Dropdown.Item as={Link} href="/user-dashboard" className="dropdown-item-custom">
+                    <i className="fas fa-tachometer-alt me-2"></i>
+                    Dashboard
+                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item onClick={handleLogout} className="dropdown-item-custom text-danger">
+                    <i className="fas fa-sign-out-alt me-2"></i>
+                    Logout
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            ) : (
+              <Link href="/login" className="button text-decoration-none">Login / Signup</Link>
+            )}
+          </div>
+        </Container>
+      </BSNavbar>
+
+      {/* Mobile Bottom Navigation */}
+      <div className="mobile-bottom-nav d-lg-none">
+        <Link
+          href="/"
+          className={`nav-icon ${pathname === '/' ? 'active' : ''}`}
+          data-label="Home"
+        >
+          <Home size={22} />
+        </Link>
+
+        <Link
+          href="/products"
+          className={`nav-icon ${pathname?.startsWith('/products') ? 'active' : ''}`}
+          data-label="Products"
+        >
+          <Package size={22} />
+        </Link>
+
+        <Link
+          href="/about"
+          className={`nav-icon ${pathname === '/about' ? 'active' : ''}`}
+          data-label="About"
+        >
+          <Info size={22} />
+        </Link>
+
+        <Link
+          href="/contact"
+          className={`nav-icon ${pathname === '/contact' ? 'active' : ''}`}
+          data-label="Contact"
+        >
+          <Phone size={22} />
+        </Link>
+
+        {/* Cart icon in the last position */}
+        <Link
+          href="/cart"
+          className={`nav-icon ${pathname === '/cart' ? 'active' : ''}`}
+          data-label="Cart"
+        >
+          <div className="position-relative">
+            <ShoppingCart size={22} />
+            {cartItemsCount > 0 && (
+              <span className="mobile-cart-badge">
+                {Math.min(cartItemsCount, 99)}
+                {cartItemsCount > 99 && '+'}
+              </span>
+            )}
+          </div>
+        </Link>
+      </div>
+    </>
+  );
+};
+
+export default Header;

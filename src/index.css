@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Apply Poppins font to headings, paragraphs, and buttons */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+span,
+.accordion-button {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+p,
+li,
+ul,
+.nav-link,
+.btn,
+a,
+.accordion-body {
+  font-family: 'Outfit', sans-serif !important;
+  color: #4d4d4d;
+}
+
+/* Breadcrumb links - no underline */
+.breadcrumb-item a,
+.breadcrumb-item a:link,
+.breadcrumb-item a:visited,
+.breadcrumb-item a:hover,
+.breadcrumb-item a:focus,
+.breadcrumb-item a:active,
+.breadcrumb-item.text-decoration-none a,
+.breadcrumb-item.text-decoration-none a:hover,
+.breadcrumb-item.text-decoration-none a:focus {
+  text-decoration: none !important;
+}
+
+/* Breadcrumb links with color class */
+.breadcrumb-item.color a,
+.breadcrumb-item.color a:link,
+.breadcrumb-item.color a:visited,
+.breadcrumb-item.color a:active {
+  color: #15640d !important;
+}
+
+.breadcrumb-item.color a:hover,
+.breadcrumb-item.color a:focus {
+  color: #0a6e01 !important;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: #0B8001;
+}
+
+/* genral styles  */
+.color {
+  color: #15640d;
+}
+
+/* Button styles - with stronger selectors to override Bootstrap */
+.button,
+.btn.button,
+button.button {
+  background-color: #0B8001 !important;
+  color: white !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-size: 16px !important;
+  border: 1px solid transparent !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  font-family: 'Outfit', sans-serif !important;
+  box-shadow: none !important;
+}
+
+.button:hover,
+.btn.button:hover,
+button.button:hover {
+  background-color: #fff !important;
+  color: #0B8001 !important;
+  border: 1px solid #0B8001 !important;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.button:focus,
+.button:active,
+.btn.button:focus,
+.btn.button:active,
+button.button:focus,
+button.button:active {
+  background-color: #fff !important;
+  color: #0B8001 !important;
+  border: 1px solid #0B8001 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 576px) {
+
+  .button,
+  .btn.button,
+  button.button {
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.btn-success {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: white !important;
+}
+
+.footer-text {
+  color: #212529;
+  /* unaku consistent color */
+}
