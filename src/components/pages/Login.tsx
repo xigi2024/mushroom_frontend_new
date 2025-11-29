@@ -164,12 +164,10 @@ const Login = () => {
             Welcome back! Please login to your account
           </p>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className='g-8'>
             {/* Email */}
             <div className="login-input-group mb-3 position-relative">
-              <label htmlFor="email" className="form-label fs-5">
-                Email Address
-              </label>
+
               <div className="position-relative">
                 <span className="position-absolute top-50 start-0 translate-middle-y ps-3 text-muted">
                   <FiMail />
@@ -194,9 +192,7 @@ const Login = () => {
 
             {/* Password */}
             <div className="login-input-group mb-3 position-relative">
-              <label htmlFor="password" className="form-label fs-5">
-                Password
-              </label>
+          
               <div className="position-relative">
                 <span className="position-absolute top-50 start-0 translate-middle-y ps-3 text-muted">
                   <FiLock />

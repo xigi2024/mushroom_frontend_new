@@ -7,7 +7,7 @@
     overflow: hidden;
     max-width: 1000px;
     margin: 0 auto;
-
+    margin-top: 30px;
   }
   .login-left {
     background-color: #f8f9fa;
@@ -33,18 +33,10 @@
   .login-input-group {
     position: relative;
   }
-  
-  .farmer-login-btn {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-  }
+
   
  .login-image{
-  height: 550px;
+  height: 500px;
  }
  @media (max-width: 767px) {
 
@@ -52,4 +44,34 @@
   height: 300px;
   object-fit: cover;
  }
+}
+
+
+
+.form-control {
+  width: 100%;
+  padding: 12px 6px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #0B8001;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.form-control::placeholder {
+  font-size: 18px; /* 16px + 2px */
+  color: #454545;
+}
+
+.form-control:focus::placeholder {
+  outline: none;
+}
+
+.form-control.is-invalid {
+  border-color: #e53e3e;
 }

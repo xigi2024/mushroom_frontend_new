@@ -204,7 +204,7 @@ const AdminDashboard = () => {
   // Update chart data when iotData changes (only temp & humidity)
   useEffect(() => {
     const now = new Date();
-    const timeDiff = (now - sensorHistory.lastUpdate) / (1000 * 60);
+    const timeDiff = (now.getTime() - sensorHistory.lastUpdate.getTime()) / (1000 * 60);
     
     if (timeDiff >= 5) {
       setSensorHistory(prev => {
@@ -435,7 +435,7 @@ const AdminDashboard = () => {
               </Card.Header>
               <Card.Body>
                 <div style={{ height: '300px' }}>
-                  <Line data={chartData} options={chartOptions} />
+                      <Line data={chartData as any} options={chartOptions as any} />
                 </div>
                 <div className="mt-2 text-center">
                   <small className="text-muted">Real-time sensor data (updates every 3 seconds)</small>

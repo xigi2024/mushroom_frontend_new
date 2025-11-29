@@ -6,20 +6,38 @@ import './styles/sidebar.css';
 import Link from 'next/link';
 
 
-const Sidebar = ({ activeSection, setActiveSection }) => {
-  const [userRole, setUserRole] = useState("user");
+interface SidebarProps {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+  userRole?: string;
+}
+
+const Sidebar = ({ activeSection, setActiveSection, userRole: propUserRole }: SidebarProps) => {
+  const [userRole, setUserRole] = useState(propUserRole || "user");
   const router = useRouter();
   const pathname = usePathname();
   const [user, setUser] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Update userRole when prop changes (e.g., after login)
+  useEffect(() => {
+    if (propUserRole) {
+      setUserRole(propUserRole.toLowerCase());
+    }
+  }, [propUserRole]);
+
+  // Get user data from localStorage
   useEffect(() => {
     const userData = localStorage.getItem('user');
     if (userData) {
-      setUser(JSON.parse(userData));
-      setUserRole(JSON.parse(userData)?.role?.toLowerCase() || "user");
+      const parsedUser = JSON.parse(userData);
+      setUser(parsedUser);
+      // Only set userRole from localStorage if prop is not provided
+      if (!propUserRole) {
+        setUserRole(parsedUser?.role?.toLowerCase() || "user");
+      }
     }
-  }, []);
+  }, [propUserRole]);
 
   const adminSidebarItems = [
     { id: 'dashboard', icon: FiHome, label: 'Admin Dashboard', path: '/admin-dashboard' },

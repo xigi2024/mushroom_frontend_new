@@ -8,12 +8,30 @@ import { Row, Col } from 'react-bootstrap';
 import { FiUser, FiMail, FiLock, FiPhone, FiEye, FiEyeOff } from 'react-icons/fi';
 import axios from 'axios';
 
+interface FormData {
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  password: string;
+  confirm_password: string;
+}
+
+interface FormErrors {
+  first_name?: string;
+  last_name?: string;
+  email?: string;
+  phone?: string;
+  password?: string;
+  confirm_password?: string;
+}
+
 const Register = () => {
   const navigate = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     first_name: '',
     last_name: '',
     email: '',
@@ -21,26 +39,30 @@ const Register = () => {
     password: '',
     confirm_password: '',
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors: FormErrors = {};
 
     if (!formData.first_name.trim()) newErrors.first_name = 'First name is required';
     if (!formData.last_name.trim()) newErrors.last_name = 'Last name is required';
 
     if (!formData.email.trim()) newErrors.email = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) newErrors.email = 'Enter valid email';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim()))
+      newErrors.email = 'Enter valid email';
 
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    else if (formData.phone.replace(/\D/g, '').length !== 10) newErrors.phone = 'Enter valid 10-digit phone number';
+    else if (formData.phone.replace(/\D/g, '').length !== 10)
+      newErrors.phone = 'Enter valid 10-digit phone number';
 
     if (!formData.password) newErrors.password = 'Password is required';
-    else if (formData.password.length < 6) newErrors.password = 'Password must be at least 6 characters';
+    else if (formData.password.length < 6)
+      newErrors.password = 'Password must be at least 6 characters';
 
     if (!formData.confirm_password) newErrors.confirm_password = 'Confirm password';
-    else if (formData.password !== formData.confirm_password) newErrors.confirm_password = 'Passwords do not match';
+    else if (formData.password !== formData.confirm_password)
+      newErrors.confirm_password = 'Passwords do not match';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -84,10 +106,12 @@ const Register = () => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
   };
 
   return (
@@ -95,25 +119,23 @@ const Register = () => {
       <div className="register-wrapper">
         <div className="register-card">
           <Row>
-            {/* Image Section - col-md-4 */}
             <Col md={12} className="register-left p-0">
               <img
                 src="/assets/register.jpg"
                 alt="Register"
-                className="register-img w-100 h-100  object-fit-cover"
-                style={{ objectFit: 'cover', height: '100%' }}
+                className="register-img w-100 h-100"
+                style={{ objectFit: "cover" }}
               />
             </Col>
 
-            {/* Form Section - col-md-8 */}
             <Col md={12} className="register-right">
+
               {success && (
                 <div className="alert alert-success mb-3">
                   <strong>🎉 Registration Successful!</strong>
                 </div>
               )}
 
-              {/* Welcome Section */}
               <div className="text-center mb-4">
                 <h2 className="titles">Create an account</h2>
                 <p className="para text-muted">
@@ -121,23 +143,22 @@ const Register = () => {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} encType="multipart/form-data">
-                {/* Rest of your form remains exactly the same */}
+              <form onSubmit={handleSubmit} encType="multipart/form-data" className='g-8'>
+
                 <Row>
                   <Col md={6}>
-                    {/* First Name Field */}
                     <div className="form-group">
-                      <label>First name</label>
                       <div className="input-with-icon">
                         <FiUser className="input-icon" />
                         <input
                           type="text"
                           name="first_name"
-                          placeholder="First name"
+                          placeholder="First Name"
                           className={`form-control ${errors.first_name ? 'is-invalid' : ''}`}
                           value={formData.first_name}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          suppressHydrationWarning
                         />
                       </div>
                       {errors.first_name && <div className="error-text">{errors.first_name}</div>}
@@ -145,19 +166,18 @@ const Register = () => {
                   </Col>
 
                   <Col md={6}>
-                    {/* Last Name Field */}
                     <div className="form-group">
-                      <label>Last name</label>
                       <div className="input-with-icon">
                         <FiUser className="input-icon" />
                         <input
                           type="text"
                           name="last_name"
-                          placeholder="Last name"
+                          placeholder="Last Name"
                           className={`form-control ${errors.last_name ? 'is-invalid' : ''}`}
                           value={formData.last_name}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          suppressHydrationWarning
                         />
                       </div>
                       {errors.last_name && <div className="error-text">{errors.last_name}</div>}
@@ -165,21 +185,20 @@ const Register = () => {
                   </Col>
                 </Row>
 
-                {/* Email & Phone */}
                 <Row>
                   <Col md={6}>
                     <div className="form-group">
-                      <label>Email address</label>
                       <div className="input-with-icon">
                         <FiMail className="input-icon" />
                         <input
                           type="email"
                           name="email"
-                          placeholder="yourmail@example.com"
+                          placeholder="Email"
                           className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                           value={formData.email}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          suppressHydrationWarning
                         />
                       </div>
                       {errors.email && <div className="error-text">{errors.email}</div>}
@@ -188,17 +207,17 @@ const Register = () => {
 
                   <Col md={6}>
                     <div className="form-group">
-                      <label>Phone number</label>
                       <div className="input-with-icon">
                         <FiPhone className="input-icon" />
                         <input
                           type="tel"
                           name="phone"
-                          placeholder="+91 9876 543 210"
+                          placeholder="Phone Number"
                           className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
                           value={formData.phone}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          suppressHydrationWarning
                         />
                       </div>
                       {errors.phone && <div className="error-text">{errors.phone}</div>}
@@ -206,44 +225,42 @@ const Register = () => {
                   </Col>
                 </Row>
 
-                {/* Password & Confirm Password */}
                 <Row>
                   <Col md={6}>
                     <div className="form-group">
-                      <label>Create password</label>
                       <div className="input-with-icon">
                         <FiLock className="input-icon" />
                         <input
                           type={showPassword ? "text" : "password"}
                           name="password"
-                          placeholder="••••••••"
+                          placeholder="Password"
                           className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                           value={formData.password}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          suppressHydrationWarning
                         />
                         <span className="password-toggle" onClick={() => setShowPassword(!showPassword)}>
                           {showPassword ? <FiEyeOff /> : <FiEye />}
                         </span>
                       </div>
                       {errors.password && <div className="error-text">{errors.password}</div>}
-                      <div className="password-hint">Your password must be a minimum of 6 characters</div>
                     </div>
                   </Col>
 
                   <Col md={6}>
                     <div className="form-group">
-                      <label>Repeat password</label>
                       <div className="input-with-icon">
                         <FiLock className="input-icon" />
                         <input
                           type={showConfirmPassword ? "text" : "password"}
                           name="confirm_password"
-                          placeholder="••••••••"
+                          placeholder="Confirm Password"
                           className={`form-control ${errors.confirm_password ? 'is-invalid' : ''}`}
                           value={formData.confirm_password}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          suppressHydrationWarning
                         />
                         <span className="password-toggle" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                           {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
@@ -254,18 +271,15 @@ const Register = () => {
                   </Col>
                 </Row>
 
-                <button
-                  type="submit"
-                  className="submit-btn"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Creating account...' : 'Sign Up'}
+                <button type="submit" className="submit-btn" disabled={isSubmitting} suppressHydrationWarning>
+                  {isSubmitting ? "Creating account..." : "Sign Up"}
                 </button>
               </form>
 
-              <div className="login-redirect text-decoration-none">
+              <div className="login-redirect">
                 Already a user? <Link href="/login">Login</Link>
               </div>
+
             </Col>
           </Row>
         </div>

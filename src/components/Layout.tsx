@@ -2,7 +2,14 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 
-const Layout = ({ children, activeSection, setActiveSection, userRole }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+  userRole?: string;
+}
+
+const Layout = ({ children, activeSection, setActiveSection, userRole }: LayoutProps) => {
   return (
     <div className="dashboard-container">
       <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={userRole} />

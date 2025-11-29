@@ -1,9 +1,7 @@
 {
-  "/admin-dashboard/page": "app/admin-dashboard/page.js",
   "/admin/product-order/page": "app/admin/product-order/page.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/user-dashboard/page": "app/user-dashboard/page.js",
-  "/user/iot-monitoring/page": "app/user/iot-monitoring/page.js",
-  "/user/product-order/page": "app/user/product-order/page.js"
+  "/products/page": "app/products/page.js",
+  "/register/page": "app/register/page.js"
 }
