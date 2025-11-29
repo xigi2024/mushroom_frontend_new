@@ -7,7 +7,7 @@ export default function AddRoomPage() {
     return (
         <ProtectedRoute>
             <Layout activeSection="iot-monitoring" setActiveSection={() => { }} userRole="user">
-                <AddRoom />
+                <AddRoom rooms={[]} setRooms={() => { }} />
             </Layout>
         </ProtectedRoute>
     );

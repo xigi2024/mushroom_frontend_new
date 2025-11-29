@@ -148,7 +148,7 @@ const AdminProductOrder = () => {
   if (loading) {
     return (
       <div className="dashboard-container">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole="admin" />
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <div className="main-content">
           <div className="dashboard-content">
             <div className="text-center py-5">
@@ -163,7 +163,7 @@ const AdminProductOrder = () => {
 
   return (
     <div className="dashboard-container">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole="admin" />
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
 
       <div className="main-content">
         <div className="dashboard-content">

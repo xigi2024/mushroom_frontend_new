@@ -282,7 +282,7 @@ const IoTMonitoring = ({ userRole = 'admin' }) => {
   if (!hasIoTKit && !hasRoomsDirect && !verificationLoading && !loading) {
     return (
       <div className="dashboard-container">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={userRole} />
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <div className="main-content">
           <div className="dashboard-content">
             <Container>
@@ -345,7 +345,7 @@ const IoTMonitoring = ({ userRole = 'admin' }) => {
   if (verificationError && !hasIoTKit && !hasRoomsDirect) {
     return (
       <div className="dashboard-container">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={userRole} />
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <div className="main-content">
           <div className="dashboard-content">
             <div className="d-flex justify-content-center align-items-center vh-100">
@@ -370,7 +370,7 @@ const IoTMonitoring = ({ userRole = 'admin' }) => {
   if (loading) {
     return (
       <div className="dashboard-container">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={userRole} />
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <div className="main-content">
           <div className="dashboard-content">
             <div className="d-flex justify-content-center align-items-center vh-100">
@@ -387,7 +387,7 @@ const IoTMonitoring = ({ userRole = 'admin' }) => {
   // Now shown if user has IoT kit OR has existing rooms
   return (
     <div className="dashboard-container">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={userRole} />
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
 
       <div className="main-content">
         <div className="dashboard-content">

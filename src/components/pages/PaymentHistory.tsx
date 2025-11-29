@@ -183,7 +183,7 @@ const PaymentHistory = () => {
   if (loading) {
     return (
       <div className="dashboard-container">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={user?.role} />
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <div className="main-content">
           <div className="d-flex justify-content-center align-items-center" style={{ height: '50vh' }}>
             <Spinner animation="border" variant="success" />
@@ -196,7 +196,7 @@ const PaymentHistory = () => {
 
   return (
     <div className="dashboard-container">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole={user?.role} />
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
       
       <div className="main-content">
         <div className="dashboard-content">

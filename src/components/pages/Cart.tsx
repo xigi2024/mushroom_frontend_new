@@ -127,27 +127,27 @@ const Cart = () => {
               </thead>
               <tbody>
                 {cart.items.map((item) => {
-                  const product = item.product || {};
-                  const price = parseFloat(item.price || product.price || 0);
+                  const product = item.product || {} as any;
+                  const price = parseFloat(String(item.price || (product as any).price || 0));
                   const quantity = item.qty || 0;
 
                   return (
-                    <tr key={item.id || `${product.id}_${Date.now()}`}>
+                    <tr key={item.id || `${(product as any).id}_${Date.now()}`}>
                       <td>
                         <div className="d-flex align-items-center">
                           {/* ✅ FIXED: Both use same URL format */}
                           <div
-                            onClick={() => navigate.push(`/product/${product.category}/${product.id}`)}
+                            onClick={() => navigate.push(`/product/${(product as any).category}/${(product as any).id}`)}
                             style={{ cursor: 'pointer' }}
                           >
                             <Image
-                              src={product.image ? `https://mycomatrix.in${product.image}` : (product.images?.[0]?.image ? `https://mycomatrix.in${product.images[0].image}` : 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product')}
+                              src={(product as any).image ? `https://mycomatrix.in${(product as any).image}` : ((product as any).images?.[0]?.image ? `https://mycomatrix.in${(product as any).images[0].image}` : 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product')}
                               width="60"
                               height="60"
                               className="me-3 rounded"
                               style={{ objectFit: 'cover' }}
                               onError={(e) => {
-                                e.target.src = 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product';
+                                (e.target as HTMLImageElement).src = 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product';
                               }}
                             />
                           </div>
@@ -155,13 +155,13 @@ const Cart = () => {
                             {/* ✅ FIXED: Same URL format as image */}
                             <div
                               className="fw-semibold"
-                              onClick={() => navigate.push(`/product/${product.category}/${product.id}`)}
+                              onClick={() => navigate.push(`/product/${(product as any).category}/${(product as any).id}`)}
                               style={{ cursor: 'pointer' }}
                             >
-                              {product.name || 'Unknown Product'}
+                              {(product as any).name || 'Unknown Product'}
                             </div>
-                            {product.size && (
-                              <small className="text-muted">Size: {product.size}</small>
+                            {(product as any).size && (
+                              <small className="text-muted">Size: {(product as any).size}</small>
                             )}
                           </div>
                         </div>
@@ -212,12 +212,14 @@ const Cart = () => {
                             justifyContent: 'center'
                           }}
                           onMouseEnter={(e) => {
-                            e.target.style.backgroundColor = '#f8d7da';
-                            e.target.style.transform = 'scale(1.1)';
+                            const target = e.target as HTMLElement;
+                            target.style.backgroundColor = '#f8d7da';
+                            target.style.transform = 'scale(1.1)';
                           }}
                           onMouseLeave={(e) => {
-                            e.target.style.backgroundColor = 'transparent';
-                            e.target.style.transform = 'scale(1)';
+                            const target = e.target as HTMLElement;
+                            target.style.backgroundColor = 'transparent';
+                            target.style.transform = 'scale(1)';
                           }}
                         >
                           <FaTrash size={16} />
@@ -269,8 +271,8 @@ const Cart = () => {
               onClick={() => {
                 if (typeof window !== 'undefined') {
                   sessionStorage.setItem('checkoutFromCart', 'true');
-                  sessionStorage.setItem('cartTotal', getTotalPrice());
-                  sessionStorage.setItem('cartItemCount', getTotalItems());
+                  sessionStorage.setItem('cartTotal', String(getTotalPrice()));
+                  sessionStorage.setItem('cartItemCount', String(getTotalItems()));
                 }
                 navigate.push('/checkout');
               }}
@@ -298,13 +300,18 @@ const Cart = () => {
                     </div>
                   </div>
                 </Alert>
-                <Button
-                  className="w-100 mb-3 button d-flex align-items-center justify-content-center"
-                  onClick={() => navigate.push('/login', { state: { from: '/cart' } })}
-                >
-                  <FaSignInAlt className="me-2" />
-                  Login to Save Your Cart
-                </Button>
+            <Button
+              className="w-100 mb-3 button d-flex align-items-center justify-content-center"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  sessionStorage.setItem('redirectAfterLogin', '/cart');
+                }
+                navigate.push('/login');
+              }}
+            >
+              <FaSignInAlt className="me-2" />
+              Login to Save Your Cart
+            </Button>
                 <div className="text-center text-muted small">
                   Your cart will be saved temporarily in this browser.
                 </div>

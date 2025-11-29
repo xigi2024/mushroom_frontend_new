@@ -21,20 +21,22 @@ const Checkout = () => {
 
       if (checkoutFromCart === 'true') {
         setFromCart(true);
-        const cTotal = parseFloat(sessionStorage.getItem('cartTotal') || 0);
-        const cItems = parseInt(sessionStorage.getItem('cartItemCount') || 0);
+        const cTotal = parseFloat(sessionStorage.getItem('cartTotal') || '0');
+        const cItems = parseInt(sessionStorage.getItem('cartItemCount') || '0', 10);
         setCartTotal(cTotal);
         setTotalItems(cItems);
         setTotalAmount(cTotal);
 
         const items = cart?.items?.map(item => {
-          const productId = item.product?.id || item.product_id;
+          const productId = item.product?.id || (item as any).product_id;
+          const itemPrice = typeof item.price === 'number' ? item.price : parseFloat(String(item.price || item.product?.price || 0));
+          const itemQty = item.qty || 1;
           return {
             product: item.product?.name || 'Product',
             product_id: productId,
-            quantity: item.qty || 1,
-            price: parseFloat(item.price || item.product?.price || 0),
-            total: (parseFloat(item.price || item.product?.price || 0) * (item.qty || 1))
+            quantity: itemQty,
+            price: itemPrice,
+            total: (itemPrice * itemQty)
           };
         }) || [];
         setOrderItems(items);
@@ -131,7 +133,7 @@ Thank you for your purchase!`;
   // ✅ FIXED: Razorpay Script Load
   const loadRazorpayScript = () => {
     return new Promise((resolve) => {
-      if (window.Razorpay) {
+      if ((window as any).Razorpay) {
         resolve(true);
         return;
       }
@@ -270,7 +272,7 @@ Thank you for your purchase!`;
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'MycoMatrix',
-        description: fromCart ? `Order for ${totalItems} items` : `Order for ${locationState.product}`,
+        description: fromCart ? `Order for ${totalItems} items` : `Order for ${orderItems[0]?.product || 'Product'}`,
         order_id: orderData.order_id,
 
         // ✅ FIXED: Payment handler with complete payload
@@ -354,7 +356,7 @@ Thank you for your purchase!`;
 
       // Step 4: Open Razorpay checkout
       console.log('🎯 Opening Razorpay checkout...');
-      const razorpay = new window.Razorpay(options);
+      const razorpay = new (window as any).Razorpay(options);
       razorpay.open();
 
     } catch (error) {
@@ -487,7 +489,7 @@ Thank you for your purchase!`;
                   required
                   placeholder="Enter 10-digit phone number"
                   pattern="[0-9]{10}"
-                  maxLength="10"
+                  maxLength={10}
                 />
               </Form.Group>
 
@@ -532,7 +534,7 @@ Thank you for your purchase!`;
                       required
                       placeholder="Enter pincode"
                       pattern="[0-9]{6}"
-                      maxLength="6"
+                      maxLength={6}
                     />
                   </Form.Group>
                 </Col>

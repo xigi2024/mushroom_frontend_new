@@ -104,7 +104,7 @@ const UserDashboard = () => {
         if (Array.isArray(ordersData)) {
           setAllOrders(ordersData);
           const sortedOrders = [...ordersData].sort((a, b) =>
-            new Date(b.created_at) - new Date(a.created_at)
+            new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
           );
           const latestThree = sortedOrders.slice(0, 3);
           setLatestOrders(latestThree);
@@ -169,7 +169,7 @@ const UserDashboard = () => {
   // Update chart data
   useEffect(() => {
     const now = new Date();
-    const timeDiff = (now - sensorHistory.lastUpdate) / (1000 * 60);
+    const timeDiff = (now.getTime() - sensorHistory.lastUpdate.getTime()) / (1000 * 60);
 
     if (timeDiff >= 5) {
       setSensorHistory(prev => {
@@ -215,19 +215,19 @@ const UserDashboard = () => {
   const chartOptions = {
     responsive: true,
     interaction: {
-      mode: 'index',
+      mode: 'index' as const,
       intersect: false,
     },
     plugins: {
       legend: {
-        position: 'top',
+        position: 'top' as const,
       }
     },
     scales: {
       y: {
-        type: 'linear',
+        type: 'linear' as const,
         display: true,
-        position: 'left',
+        position: 'left' as const,
         title: {
           display: true,
           text: 'Temperature (°C)'
@@ -239,9 +239,9 @@ const UserDashboard = () => {
         }
       },
       y1: {
-        type: 'linear',
+        type: 'linear' as const,
         display: true,
-        position: 'right',
+        position: 'right' as const,
         title: {
           display: true,
           text: 'Humidity (%)'

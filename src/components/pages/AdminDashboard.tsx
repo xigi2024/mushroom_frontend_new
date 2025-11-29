@@ -552,7 +552,7 @@ const AdminDashboard = () => {
   return (
     <div className="dashboard-container">
       {/* Sidebar Component */}
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} userRole="admin" />
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
 
       {/* Main Content */}
       <div className="main-content">

@@ -485,18 +485,6 @@ button {
   position: relative;
 }
 
-.stat-card .card-body:after {
-  content: "";
-  z-index: 0;
-  background: linear-gradient(135deg, #4caf501a, #2196f31a);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
 .stat-number {
   color: #2d5016;
   z-index: 1;
@@ -825,12 +813,26 @@ button {
   background: #e2e8f0;
   border-radius: 10px;
   height: 8px;
+  position: relative;
   overflow: hidden;
 }
 
 .progress-bar {
   border-radius: 10px;
   transition: all .3s;
+  position: relative;
+}
+
+.progress-bar:before, .progress-bar:after, .progress:before, .progress:after, .progress-bar :before, .progress-bar :after, .stat-card .progress-bar:before, .stat-card .progress-bar:after, .stat-card .progress:before, .stat-card .progress:after, .stat-card .progress-bar :before, .stat-card .progress-bar :after {
+  content: none !important;
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.progress-bar, .progress {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .sensor-metric {

@@ -3,19 +3,28 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 import Sidebar from '../Sidebar';
+import axios from 'axios';
+import { useAuth } from '../../context/AuthContext';
 
-const AddRoom = ({ rooms, setRooms }) => {
+const API_BASE_URL = "https://mycomatrix.in/api";
+
+const AddRoom = ({ rooms = [], setRooms = null }) => {
   const router = useRouter();
+  const { isAuthenticated, token } = useAuth();
   const [formData, setFormData] = useState({
     name: '',
-    temperature: 23,
-    humidity: 80,
-    co2Level: 1000,
-    lightIntensity: 1200,
-    status: 'optimal'
+    kit_id: ''
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const getAuthHeaders = () => {
+    return {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    };
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -24,43 +33,83 @@ const AddRoom = ({ rooms, setRooms }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+    setSuccess('');
 
     if (!formData.name) {
       setError('Room name is required.');
       return;
     }
 
-    const newRoom = {
-      id: rooms.length + 1,
-      ...formData,
-      temperature: parseFloat(formData.temperature),
-      humidity: parseFloat(formData.humidity),
-      co2Level: parseFloat(formData.co2Level),
-      lightIntensity: parseFloat(formData.lightIntensity)
-    };
+    if (!formData.kit_id) {
+      setError('Kit ID is required.');
+      return;
+    }
 
-    setRooms([...rooms, newRoom]);
-    setSuccess('Room added successfully!');
+    // If using API (preferred method)
+    if (isAuthenticated && token) {
+      setLoading(true);
+      try {
+        const roomData = {
+          name: formData.name,
+          kit_id: formData.kit_id
+        };
 
-    setFormData({
-      name: '',
-      temperature: 23,
-      humidity: 80,
-      co2Level: 1000,
-      lightIntensity: 1200,
-      status: 'optimal'
-    });
+        const response = await axios.post(`${API_BASE_URL}/rooms/create/`, roomData, {
+          headers: getAuthHeaders()
+        });
 
-    setTimeout(() => {
-      router.push('/iot-monitoring');
-    }, 2000);
+        setSuccess('Room added successfully!');
+        setFormData({
+          name: '',
+          kit_id: ''
+        });
+
+        setTimeout(() => {
+          router.push('/iot-monitoring');
+        }, 2000);
+      } catch (error) {
+        console.error('Error adding room:', error);
+        if (error.response?.status === 401) {
+          setError('Session expired. Please login again.');
+          setTimeout(() => {
+            router.push('/login');
+          }, 2000);
+        } else if (error.response?.data?.error) {
+          setError(error.response.data.error);
+        } else if (error.response?.data) {
+          setError(error.response.data.message || 'Failed to add room');
+        } else {
+          setError('Failed to add room. Please try again.');
+        }
+      } finally {
+        setLoading(false);
+      }
+    } else if (setRooms && rooms) {
+      // Fallback to local state if props provided (legacy support)
+      const newRoom = {
+        id: rooms.length + 1,
+        ...formData
+      };
+      setRooms([...rooms, newRoom]);
+      setSuccess('Room added successfully!');
+      setFormData({
+        name: '',
+        kit_id: ''
+      });
+      setTimeout(() => {
+        router.push('/iot-monitoring');
+      }, 2000);
+    } else {
+      setError('Authentication required. Please login.');
+    }
   };
 
   return (
-    <div className="dashboard-container d-flex">
-      <Sidebar activeSection="iot-monitoring" />
+        <div className="dashboard-container d-flex">
+          <Sidebar activeSection="iot-monitoring" setActiveSection={() => { }} />
 
       <div className="main-content flex-grow-1 p-4">
         <h3 className="mb-3">Add New Room</h3>
@@ -73,83 +122,36 @@ const AddRoom = ({ rooms, setRooms }) => {
             <Form onSubmit={handleSubmit}>
               <Row className="mb-3">
                 <Col md={6}>
+                  <Form.Group controlId="kitId">
+                    <Form.Label>Kit ID *</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Kit ID"
+                      name="kit_id"
+                      value={formData.kit_id}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md={6}>
                   <Form.Group controlId="roomName">
-                    <Form.Label>Room Name</Form.Label>
+                    <Form.Label>Room Name *</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="Enter room name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                    />
-                  </Form.Group>
-                </Col>
-                <Col md={6}>
-                  <Form.Group controlId="status">
-                    <Form.Label>Status</Form.Label>
-                    <Form.Select
-                      name="status"
-                      value={formData.status}
-                      onChange={handleChange}
-                    >
-                      <option value="optimal">Optimal</option>
-                      <option value="warning">Warning</option>
-                      <option value="critical">Critical</option>
-                    </Form.Select>
-                  </Form.Group>
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <Col md={3}>
-                  <Form.Group controlId="temperature">
-                    <Form.Label>Temperature (°C)</Form.Label>
-                    <Form.Control
-                      type="number"
-                      name="temperature"
-                      value={formData.temperature}
-                      onChange={handleChange}
-                    />
-                  </Form.Group>
-                </Col>
-                <Col md={3}>
-                  <Form.Group controlId="humidity">
-                    <Form.Label>Humidity (%)</Form.Label>
-                    <Form.Control
-                      type="number"
-                      name="humidity"
-                      value={formData.humidity}
-                      onChange={handleChange}
-                    />
-                  </Form.Group>
-                </Col>
-                <Col md={3}>
-                  <Form.Group controlId="co2Level">
-                    <Form.Label>CO2 Level (ppm)</Form.Label>
-                    <Form.Control
-                      type="number"
-                      name="co2Level"
-                      value={formData.co2Level}
-                      onChange={handleChange}
-                    />
-                  </Form.Group>
-                </Col>
-                <Col md={3}>
-                  <Form.Group controlId="lightIntensity">
-                    <Form.Label>Light Intensity (lux)</Form.Label>
-                    <Form.Control
-                      type="number"
-                      name="lightIntensity"
-                      value={formData.lightIntensity}
-                      onChange={handleChange}
+                      required
                     />
                   </Form.Group>
                 </Col>
               </Row>
 
               <div className="text-end">
-                <Button variant="primary" type="submit">
-                  Add Room
+                <Button variant="primary" type="submit" disabled={loading}>
+                  {loading ? 'Adding...' : 'Add Room'}
                 </Button>
               </div>
             </Form>

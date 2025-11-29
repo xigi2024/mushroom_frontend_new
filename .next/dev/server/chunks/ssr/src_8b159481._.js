@@ -502,7 +502,7 @@ const UserDashboard = ()=>{
                     setAllOrders(ordersData);
                     const sortedOrders = [
                         ...ordersData
-                    ].sort((a, b)=>new Date(b.created_at) - new Date(a.created_at));
+                    ].sort((a, b)=>new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
                     const latestThree = sortedOrders.slice(0, 3);
                     setLatestOrders(latestThree);
                 }
@@ -564,7 +564,7 @@ const UserDashboard = ()=>{
     // Update chart data
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const now = new Date();
-        const timeDiff = (now - sensorHistory.lastUpdate) / (1000 * 60);
+        const timeDiff = (now.getTime() - sensorHistory.lastUpdate.getTime()) / (1000 * 60);
         if (timeDiff >= 5) {
             setSensorHistory((prev)=>{
                 const newLabels = [

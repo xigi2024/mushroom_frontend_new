@@ -183,7 +183,7 @@ const Accounts = () => {
                     <tbody>
                       {filteredUsers.length === 0 ? (
                         <tr>
-                          <td colSpan="8" className="text-center py-4 text-muted">
+                          <td colSpan={8} className="text-center py-4 text-muted">
                             {searchTerm ? 'No users found matching your search.' : 'No users found.'}
                           </td>
                         </tr>
