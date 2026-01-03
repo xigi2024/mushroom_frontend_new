@@ -52,7 +52,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       try {
         const parsedCart = JSON.parse(guestCart);
         setCart(parsedCart);
-        console.log('🛒 Loaded guest cart:', parsedCart);
+        // Debug log removed for production
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🛒 Loaded guest cart:', parsedCart);
+        }
       } catch (e) {
         console.error('Error parsing guest cart:', e);
         setCart({ items: [], total_amount: 0, id: null });

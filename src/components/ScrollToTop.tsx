@@ -7,10 +7,12 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "auto",
-    });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: "auto",
+      });
+    }
   }, [pathname]);
 
   return null;

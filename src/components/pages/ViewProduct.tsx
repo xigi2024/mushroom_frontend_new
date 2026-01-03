@@ -2,20 +2,29 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Container, Row, Col, Card, Button, Breadcrumb, Form, Badge, Spinner, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Breadcrumb, Form, Badge, Spinner, Alert, Modal } from 'react-bootstrap';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useCart } from "../../context/CartContext";
 
 const ViewProduct = () => {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
   const navigate = useRouter();
+  const { addToCart, isAuthenticated } = useCart();
   const [category, setCategory] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [addingToCart, setAddingToCart] = useState(null);
   const [filters, setFilters] = useState({
     priceRange: '',
     inStock: false
   });
+  
+  // Modal state for guest after add-to-cart
+  const [showGuestModal, setShowGuestModal] = useState(false);
+  const [modalProduct, setModalProduct] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,6 +73,44 @@ const ViewProduct = () => {
     navigate.push(`/product/${id}/${productId}`);
   };
 
+  const handleAddToCart = async (product, e) => {
+    if (e) {
+      e.stopPropagation();
+    }
+
+    console.log(
+      "🛒 Adding product to cart:",
+      product.name,
+      "User authenticated:",
+      isAuthenticated
+    );
+
+    setAddingToCart(product.id);
+
+    try {
+      const result = await addToCart(product);
+
+      // result shape may vary; keep original check
+      if (result?.success) {
+        // always show success toast
+        toast.success(`${product.name} added to cart!`);
+
+        if (!isAuthenticated) {
+          // for guest users show modal (ask to login/register)
+          setModalProduct(product);
+          setShowGuestModal(true);
+        }
+      } else {
+        toast.error("Failed to add product to cart. Please try again.");
+      }
+    } catch (err) {
+      console.error("Error adding to cart:", err);
+      toast.error("Failed to add product to cart. Please try again.");
+    } finally {
+      setAddingToCart(null);
+    }
+  };
+
   // Filter products based on selected filters
   const filteredProducts = products.filter(product => {
     // Price range filter
@@ -102,6 +149,8 @@ const ViewProduct = () => {
 
   return (
     <div className="product-detail-page">
+      <ToastContainer position="top-right" autoClose={3000} />
+      
       {/* Hero Section */}
       <section
         className="about-hero-section d-flex align-items-center text-white position-relative"
@@ -312,12 +361,10 @@ const ViewProduct = () => {
                         </div>
                         <Button
                           className='button mt-3'
-
-                          onClick={(e) => {
-                            e.stopPropagation();
-                          }}
+                          onClick={(e) => handleAddToCart(product, e)}
+                          disabled={addingToCart === product.id}
                         >
-                          Add to Cart
+                          {addingToCart === product.id ? "Adding..." : "Add to Cart"}
                         </Button>
                       </Card.Body>
                     </Card>
@@ -363,6 +410,41 @@ const ViewProduct = () => {
 
         </Row>
       </Container>
+
+      {/* Guest Modal (shown after guest adds product to cart) */}
+      <Modal
+        show={showGuestModal}
+        onHide={() => setShowGuestModal(false)}
+        centered
+        backdrop="static"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Item added to cart</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p style={{ marginBottom: 0 }}>
+            <strong>{modalProduct?.name}</strong> added to cart!
+          </p>
+          <p className="text-muted mt-2" style={{ fontSize: "0.95rem" }}>
+            Create an account to save your cart permanently. Would you like to
+            login/register now?
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" className='text-white' onClick={() => setShowGuestModal(false)}>
+            Continue Shopping
+          </Button>
+          <Button
+            className='button'
+            onClick={() => {
+              setShowGuestModal(false);
+              navigate.push("/login");
+            }}
+          >
+            Login / Register
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       {/* Add some custom CSS for better filter alignment */}
       <style jsx>{`

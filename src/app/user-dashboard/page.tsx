@@ -1,14 +1,16 @@
-"use client";
+import type { Metadata } from 'next';
 import UserDashboard from '../../components/pages/UserDashboard';
-import Layout from '../../components/Layout';
-import ProtectedRoute from '../../components/ProtectedRoute';
+
+export const metadata: Metadata = {
+    title: 'User Dashboard',
+    robots: {
+        index: false,
+        follow: false,
+        noarchive: true,
+        nosnippet: true,
+    },
+};
 
 export default function UserDashboardPage() {
-    return (
-        <ProtectedRoute>
-            <Layout activeSection="dashboard" setActiveSection={() => { }} userRole="user">
-                <UserDashboard />
-            </Layout>
-        </ProtectedRoute>
-    );
+    return <UserDashboard />;
 }

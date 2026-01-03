@@ -41,20 +41,22 @@ const Checkout = ()=>{
                 const checkoutFromCart = sessionStorage.getItem('checkoutFromCart');
                 if (checkoutFromCart === 'true') {
                     setFromCart(true);
-                    const cTotal = parseFloat(sessionStorage.getItem('cartTotal') || 0);
-                    const cItems = parseInt(sessionStorage.getItem('cartItemCount') || 0);
+                    const cTotal = parseFloat(sessionStorage.getItem('cartTotal') || '0');
+                    const cItems = parseInt(sessionStorage.getItem('cartItemCount') || '0', 10);
                     setCartTotal(cTotal);
                     setTotalItems(cItems);
                     setTotalAmount(cTotal);
                     const items = cart?.items?.map({
                         "Checkout.useEffect": (item)=>{
                             const productId = item.product?.id || item.product_id;
+                            const itemPrice = typeof item.price === 'number' ? item.price : parseFloat(String(item.price || item.product?.price || 0));
+                            const itemQty = item.qty || 1;
                             return {
                                 product: item.product?.name || 'Product',
                                 product_id: productId,
-                                quantity: item.qty || 1,
-                                price: parseFloat(item.price || item.product?.price || 0),
-                                total: parseFloat(item.price || item.product?.price || 0) * (item.qty || 1)
+                                quantity: itemQty,
+                                price: itemPrice,
+                                total: itemPrice * itemQty
                             };
                         }
                     }["Checkout.useEffect"]) || [];
@@ -276,7 +278,7 @@ Thank you for your purchase!`;
                 amount: orderData.amount,
                 currency: orderData.currency,
                 name: 'MycoMatrix',
-                description: fromCart ? `Order for ${totalItems} items` : `Order for ${locationState.product}`,
+                description: fromCart ? `Order for ${totalItems} items` : `Order for ${orderItems[0]?.product || 'Product'}`,
                 order_id: orderData.order_id,
                 // ✅ FIXED: Payment handler with complete payload
                 handler: async function(response) {
@@ -413,7 +415,7 @@ Thank you for your purchase!`;
                         children: "Invalid Order"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                        lineNumber: 426,
+                        lineNumber: 428,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -421,7 +423,7 @@ Thank you for your purchase!`;
                         children: "Please add items to your cart or select a product"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                        lineNumber: 427,
+                        lineNumber: 429,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -430,18 +432,18 @@ Thank you for your purchase!`;
                         children: "Continue Shopping"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                        lineNumber: 428,
+                        lineNumber: 430,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                lineNumber: 425,
+                lineNumber: 427,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/pages/Checkout.tsx",
-            lineNumber: 424,
+            lineNumber: 426,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -453,7 +455,7 @@ Thank you for your purchase!`;
                 children: "Checkout"
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                lineNumber: 441,
+                lineNumber: 443,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Row$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Row$3e$__["Row"], {
@@ -469,7 +471,7 @@ Thank you for your purchase!`;
                                         children: "Shipping Information"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                        lineNumber: 446,
+                                        lineNumber: 448,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"], {
@@ -486,7 +488,7 @@ Thank you for your purchase!`;
                                                                     children: "Full Name *"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 451,
+                                                                    lineNumber: 453,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Control, {
@@ -499,18 +501,18 @@ Thank you for your purchase!`;
                                                                     placeholder: "Enter your full name"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 452,
+                                                                    lineNumber: 454,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                            lineNumber: 450,
+                                                            lineNumber: 452,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 449,
+                                                        lineNumber: 451,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -522,7 +524,7 @@ Thank you for your purchase!`;
                                                                     children: "Email Address *"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 465,
+                                                                    lineNumber: 467,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Control, {
@@ -535,24 +537,24 @@ Thank you for your purchase!`;
                                                                     placeholder: "Enter your email"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 466,
+                                                                    lineNumber: 468,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                            lineNumber: 464,
+                                                            lineNumber: 466,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 463,
+                                                        lineNumber: 465,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 448,
+                                                lineNumber: 450,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Group, {
@@ -562,7 +564,7 @@ Thank you for your purchase!`;
                                                         children: "Phone Number *"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 480,
+                                                        lineNumber: 482,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Control, {
@@ -574,16 +576,16 @@ Thank you for your purchase!`;
                                                         required: true,
                                                         placeholder: "Enter 10-digit phone number",
                                                         pattern: "[0-9]{10}",
-                                                        maxLength: "10"
+                                                        maxLength: 10
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 481,
+                                                        lineNumber: 483,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 479,
+                                                lineNumber: 481,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Group, {
@@ -593,7 +595,7 @@ Thank you for your purchase!`;
                                                         children: "Address *"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 495,
+                                                        lineNumber: 497,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Control, {
@@ -607,13 +609,13 @@ Thank you for your purchase!`;
                                                         placeholder: "Enter your complete shipping address"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 496,
+                                                        lineNumber: 498,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 494,
+                                                lineNumber: 496,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Row$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Row$3e$__["Row"], {
@@ -627,7 +629,7 @@ Thank you for your purchase!`;
                                                                     children: "City *"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 511,
+                                                                    lineNumber: 513,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Control, {
@@ -640,18 +642,18 @@ Thank you for your purchase!`;
                                                                     placeholder: "Enter your city"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 512,
+                                                                    lineNumber: 514,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                            lineNumber: 510,
+                                                            lineNumber: 512,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 509,
+                                                        lineNumber: 511,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -663,7 +665,7 @@ Thank you for your purchase!`;
                                                                     children: "Pincode *"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 525,
+                                                                    lineNumber: 527,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Control, {
@@ -675,27 +677,27 @@ Thank you for your purchase!`;
                                                                     required: true,
                                                                     placeholder: "Enter pincode",
                                                                     pattern: "[0-9]{6}",
-                                                                    maxLength: "6"
+                                                                    maxLength: 6
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                                    lineNumber: 526,
+                                                                    lineNumber: 528,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                            lineNumber: 524,
+                                                            lineNumber: 526,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 523,
+                                                        lineNumber: 525,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 508,
+                                                lineNumber: 510,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -703,7 +705,7 @@ Thank you for your purchase!`;
                                                 children: "Payment Method"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 541,
+                                                lineNumber: 543,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Group, {
@@ -719,7 +721,7 @@ Thank you for your purchase!`;
                                                         className: "mb-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 543,
+                                                        lineNumber: 545,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Check, {
@@ -732,7 +734,7 @@ Thank you for your purchase!`;
                                                         className: "mb-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 552,
+                                                        lineNumber: 554,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Form$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Form$3e$__["Form"].Check, {
@@ -744,13 +746,13 @@ Thank you for your purchase!`;
                                                         onChange: handleInputChange
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 561,
+                                                        lineNumber: 563,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 542,
+                                                lineNumber: 544,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -766,7 +768,7 @@ Thank you for your purchase!`;
                                                             className: "me-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                            lineNumber: 579,
+                                                            lineNumber: 581,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         formData.paymentMethod === 'cod' ? 'Placing Order...' : 'Processing Payment...'
@@ -774,19 +776,19 @@ Thank you for your purchase!`;
                                                 }, void 0, true) : formData.paymentMethod === 'cod' ? `Place Order (COD) - ₹${totalAmount.toFixed(2)}` : `Proceed to Pay ₹${totalAmount.toFixed(2)}`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 571,
+                                                lineNumber: 573,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                        lineNumber: 447,
+                                        lineNumber: 449,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                lineNumber: 445,
+                                lineNumber: 447,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Alert$3e$__["Alert"], {
@@ -795,13 +797,13 @@ Thank you for your purchase!`;
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                lineNumber: 591,
+                                lineNumber: 593,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                        lineNumber: 444,
+                        lineNumber: 446,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -817,7 +819,7 @@ Thank you for your purchase!`;
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 599,
+                                    lineNumber: 601,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 orderItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -831,7 +833,7 @@ Thank you for your purchase!`;
                                                         children: item.product
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 606,
+                                                        lineNumber: 608,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -844,12 +846,12 @@ Thank you for your purchase!`;
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 607,
+                                                        lineNumber: 609,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 610,
+                                                        lineNumber: 612,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
@@ -860,13 +862,13 @@ Thank you for your purchase!`;
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                        lineNumber: 611,
+                                                        lineNumber: 613,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 605,
+                                                lineNumber: 607,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -877,18 +879,18 @@ Thank you for your purchase!`;
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                                                lineNumber: 615,
+                                                lineNumber: 617,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                                        lineNumber: 604,
+                                        lineNumber: 606,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 619,
+                                    lineNumber: 621,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -901,7 +903,7 @@ Thank you for your purchase!`;
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 621,
+                                            lineNumber: 623,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -911,13 +913,13 @@ Thank you for your purchase!`;
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 622,
+                                            lineNumber: 624,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 620,
+                                    lineNumber: 622,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -927,7 +929,7 @@ Thank you for your purchase!`;
                                             children: "Shipping"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 625,
+                                            lineNumber: 627,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -935,13 +937,13 @@ Thank you for your purchase!`;
                                             children: "FREE"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 626,
+                                            lineNumber: 628,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 624,
+                                    lineNumber: 626,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -951,7 +953,7 @@ Thank you for your purchase!`;
                                             children: "Tax"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 629,
+                                            lineNumber: 631,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -959,18 +961,18 @@ Thank you for your purchase!`;
                                             children: "Included"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 630,
+                                            lineNumber: 632,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 628,
+                                    lineNumber: 630,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 632,
+                                    lineNumber: 634,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -980,7 +982,7 @@ Thank you for your purchase!`;
                                             children: "Total Amount"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 634,
+                                            lineNumber: 636,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -990,13 +992,13 @@ Thank you for your purchase!`;
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 635,
+                                            lineNumber: 637,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 633,
+                                    lineNumber: 635,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 formData.paymentMethod === 'cod' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Alert$3e$__["Alert"], {
@@ -1007,37 +1009,37 @@ Thank you for your purchase!`;
                                             children: "Cash on Delivery:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                                            lineNumber: 640,
+                                            lineNumber: 642,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Pay when you receive your order"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Checkout.tsx",
-                                    lineNumber: 639,
+                                    lineNumber: 641,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/Checkout.tsx",
-                            lineNumber: 598,
+                            lineNumber: 600,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Checkout.tsx",
-                        lineNumber: 597,
+                        lineNumber: 599,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Checkout.tsx",
-                lineNumber: 443,
+                lineNumber: 445,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/pages/Checkout.tsx",
-        lineNumber: 440,
+        lineNumber: 442,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

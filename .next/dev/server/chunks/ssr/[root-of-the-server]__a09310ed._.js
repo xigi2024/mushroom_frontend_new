@@ -50,16 +50,49 @@ __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$c
 
 __turbopack_context__.s([
     "default",
-    ()=>ProductsPage
+    ()=>ProductsPage,
+    "metadata",
+    ()=>metadata
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$Products$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/pages/Products.tsx [app-rsc] (ecmascript)");
 ;
 ;
+const metadata = {
+    title: 'Products - Myco Matrix | Premium Mushroom Products & Grow Kits',
+    description: 'Browse our premium selection of organic mushroom products and IoT-monitored grow kits. Fresh, healthy mushrooms delivered to your door.',
+    keywords: 'mushroom products, mushroom grow kits, organic mushrooms, premium mushrooms, IoT monitored mushrooms, mushroom cultivation kits',
+    openGraph: {
+        title: 'Products - Myco Matrix',
+        description: 'Browse our premium selection of organic mushroom products and IoT-monitored grow kits.',
+        url: 'https://mycomatrix.in/products',
+        siteName: 'Myco Matrix',
+        images: [
+            {
+                url: 'https://mycomatrix.in/assets/hero.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Myco Matrix Mushroom Products'
+            }
+        ],
+        type: 'website'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Products - Myco Matrix',
+        description: 'Browse our premium selection of organic mushroom products.',
+        images: [
+            'https://mycomatrix.in/assets/hero.jpg'
+        ]
+    },
+    alternates: {
+        canonical: 'https://mycomatrix.in/products'
+    }
+};
 function ProductsPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$Products$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
         fileName: "[project]/src/app/products/page.tsx",
-        lineNumber: 4,
+        lineNumber: 35,
         columnNumber: 12
     }, this);
 }

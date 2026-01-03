@@ -55,7 +55,7 @@ const PromisesSection = ()=>{
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "jsx-7ba69d5f0e356181" + " " + "py-5 my-5 position-relative",
+        className: "jsx-3fb54fb7cecd9054" + " " + "py-5 my-5 position-relative",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Container$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Container$3e$__["Container"], {
                 children: [
@@ -64,7 +64,7 @@ const PromisesSection = ()=>{
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "jsx-7ba69d5f0e356181" + " " + "color subtext fw-semibold mb-2",
+                                    className: "jsx-3fb54fb7cecd9054" + " " + "color subtext fw-semibold mb-2",
                                     children: "Technology Meets Nature."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
@@ -72,7 +72,7 @@ const PromisesSection = ()=>{
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-7ba69d5f0e356181" + " " + "fw-bold color head",
+                                    className: "jsx-3fb54fb7cecd9054" + " " + "fw-bold color head",
                                     children: "Smart Farming, Fresh Mushrooms"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
@@ -94,7 +94,7 @@ const PromisesSection = ()=>{
                         className: "justify-content-center position-relative",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-7ba69d5f0e356181" + " " + "curved-lines-container d-none d-lg-block",
+                                className: "jsx-3fb54fb7cecd9054" + " " + "curved-lines-container d-none d-lg-block",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                     width: "100%",
                                     height: "200",
@@ -105,19 +105,19 @@ const PromisesSection = ()=>{
                                         pointerEvents: 'auto'
                                     },
                                     viewBox: "0 0 1200 200",
-                                    className: "jsx-7ba69d5f0e356181" + " " + "position-absolute",
+                                    className: "jsx-3fb54fb7cecd9054" + " " + "position-absolute",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
-                                            className: "jsx-7ba69d5f0e356181",
+                                            className: "jsx-3fb54fb7cecd9054",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("mask", {
                                                 id: "centerIconMask",
-                                                className: "jsx-7ba69d5f0e356181",
+                                                className: "jsx-3fb54fb7cecd9054",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
                                                         width: "1200",
                                                         height: "200",
                                                         fill: "white",
-                                                        className: "jsx-7ba69d5f0e356181"
+                                                        className: "jsx-3fb54fb7cecd9054"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
                                                         lineNumber: 57,
@@ -128,7 +128,7 @@ const PromisesSection = ()=>{
                                                         cy: "100",
                                                         r: "70",
                                                         fill: "black",
-                                                        className: "jsx-7ba69d5f0e356181"
+                                                        className: "jsx-3fb54fb7cecd9054"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
                                                         lineNumber: 58,
@@ -153,7 +153,7 @@ const PromisesSection = ()=>{
                                             fill: "none",
                                             opacity: "0.8",
                                             mask: "url(#centerIconMask)",
-                                            className: "jsx-7ba69d5f0e356181"
+                                            className: "jsx-3fb54fb7cecd9054"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
                                             lineNumber: 63,
@@ -167,7 +167,7 @@ const PromisesSection = ()=>{
                                             fill: "none",
                                             opacity: "0.8",
                                             mask: "url(#centerIconMask)",
-                                            className: "jsx-7ba69d5f0e356181"
+                                            className: "jsx-3fb54fb7cecd9054"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
                                             lineNumber: 73,
@@ -201,13 +201,13 @@ const PromisesSection = ()=>{
                                             className: "p-4",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-7ba69d5f0e356181" + " " + "promise-icon mb-4",
+                                                    className: "jsx-3fb54fb7cecd9054" + " " + "promise-icon mb-4",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         style: {
                                                             width: "180px",
                                                             height: "180px"
                                                         },
-                                                        className: "jsx-7ba69d5f0e356181" + " " + "d-inline-flex align-items-center justify-content-center",
+                                                        className: "jsx-3fb54fb7cecd9054" + " " + "d-inline-flex align-items-center justify-content-center",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                             src: promise.icon,
                                                             alt: promise.title,
@@ -216,7 +216,7 @@ const PromisesSection = ()=>{
                                                                 height: "150px",
                                                                 objectFit: "contain"
                                                             },
-                                                            className: "jsx-7ba69d5f0e356181"
+                                                            className: "jsx-3fb54fb7cecd9054"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/Home.tsx",
                                                             lineNumber: 100,
@@ -277,8 +277,8 @@ const PromisesSection = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "7ba69d5f0e356181",
-                children: ".curved-lines-container.jsx-7ba69d5f0e356181{height:100%;position:absolute;top:-80px;left:0;right:0}.promise-card.jsx-7ba69d5f0e356181{background:0 0!important}.curved-lines-container.jsx-7ba69d5f0e356181 svg.jsx-7ba69d5f0e356181 path.jsx-7ba69d5f0e356181{filter:drop-shadow(2px 2px 4px #0003)}.promise-icon.jsx-7ba69d5f0e356181{z-index:15;position:relative}@media (width<=991.98px){.curved-lines-container.jsx-7ba69d5f0e356181{display:none!important}}"
+                id: "3fb54fb7cecd9054",
+                children: ".curved-lines-container.jsx-3fb54fb7cecd9054{height:100%;position:absolute;top:-80px;left:0;right:0}.promise-card.jsx-3fb54fb7cecd9054{background:0 0!important}.curved-lines-container.jsx-3fb54fb7cecd9054 svg.jsx-3fb54fb7cecd9054 path.jsx-3fb54fb7cecd9054{filter:drop-shadow(2px 2px 4px #0003)}.promise-icon.jsx-3fb54fb7cecd9054{z-index:15;position:relative}@media (width<=991.98px){.curved-lines-container.jsx-3fb54fb7cecd9054{display:none!important}}"
             }, void 0, false, void 0, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
@@ -840,7 +840,6 @@ const ProductSection = ()=>{
             try {
                 setLoading(true);
                 const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("https://mycomatrix.in/api/category/");
-                console.log("API Response:", response.data); // Debug log
                 // API response structure check
                 let categories = [];
                 if (Array.isArray(response.data)) {
@@ -906,7 +905,7 @@ const ProductSection = ()=>{
                                     children: "The best of our collection, ready for you"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 513,
+                                    lineNumber: 511,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -919,14 +918,14 @@ const ProductSection = ()=>{
                                         "Don't Miss These ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 517,
+                                            lineNumber: 515,
                                             columnNumber: 34
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Favourite"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 516,
+                                    lineNumber: 514,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -934,18 +933,18 @@ const ProductSection = ()=>{
                                     children: "Discover the joy of growing your own mushrooms with our starter kits."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 519,
+                                    lineNumber: 517,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 512,
+                            lineNumber: 510,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 511,
+                        lineNumber: 509,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -963,33 +962,33 @@ const ProductSection = ()=>{
                                     children: "Loading..."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 527,
+                                    lineNumber: 525,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 526,
+                                lineNumber: 524,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 525,
+                            lineNumber: 523,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 524,
+                        lineNumber: 522,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 510,
+                lineNumber: 508,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 509,
+            lineNumber: 507,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -1016,7 +1015,7 @@ const ProductSection = ()=>{
                                         children: "The best of our collection, ready for you"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 543,
+                                        lineNumber: 541,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1029,20 +1028,20 @@ const ProductSection = ()=>{
                                             "Don't Miss These ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 547,
+                                                lineNumber: 545,
                                                 columnNumber: 34
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " Favourite"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 546,
+                                        lineNumber: 544,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 542,
+                                lineNumber: 540,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1056,18 +1055,18 @@ const ProductSection = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 551,
+                                    lineNumber: 549,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 550,
+                                lineNumber: 548,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 541,
+                        lineNumber: 539,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -1084,7 +1083,7 @@ const ProductSection = ()=>{
                                         children: error
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 561,
+                                        lineNumber: 559,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1093,34 +1092,34 @@ const ProductSection = ()=>{
                                         children: "Try Again"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 562,
+                                        lineNumber: 560,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 560,
+                                lineNumber: 558,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 559,
+                            lineNumber: 557,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 558,
+                        lineNumber: 556,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 540,
+                lineNumber: 538,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 539,
+            lineNumber: 537,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -1147,7 +1146,7 @@ const ProductSection = ()=>{
                                         children: "The best of our collection, ready for you"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 583,
+                                        lineNumber: 581,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1160,20 +1159,20 @@ const ProductSection = ()=>{
                                             "Don't Miss These ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 587,
+                                                lineNumber: 585,
                                                 columnNumber: 34
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " Favourite"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 586,
+                                        lineNumber: 584,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 582,
+                                lineNumber: 580,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1187,18 +1186,18 @@ const ProductSection = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 591,
+                                    lineNumber: 589,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 590,
+                                lineNumber: 588,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 581,
+                        lineNumber: 579,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -1214,33 +1213,33 @@ const ProductSection = ()=>{
                                     children: "No categories available at the moment."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 601,
+                                    lineNumber: 599,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 600,
+                                lineNumber: 598,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 599,
+                            lineNumber: 597,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 598,
+                        lineNumber: 596,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 580,
+                lineNumber: 578,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 579,
+            lineNumber: 577,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -1268,14 +1267,14 @@ const ProductSection = ()=>{
                                         "Don't Miss Our ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 624,
+                                            lineNumber: 622,
                                             columnNumber: 32
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Favourite"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 621,
+                                    lineNumber: 619,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1283,7 +1282,7 @@ const ProductSection = ()=>{
                                     children: "Discover the joy of growing your own mushrooms with our premium starter kits. We have everything you need to start your mushroom farming journey today!"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 626,
+                                    lineNumber: 624,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1292,18 +1291,18 @@ const ProductSection = ()=>{
                                     children: "Shop Now"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 629,
+                                    lineNumber: 627,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 620,
+                            lineNumber: 618,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 615,
+                        lineNumber: 613,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -1338,12 +1337,12 @@ const ProductSection = ()=>{
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                                lineNumber: 657,
+                                                                lineNumber: 655,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                                            lineNumber: 656,
+                                                            lineNumber: 654,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Card$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Card$3e$__["Card"].Body, {
@@ -1353,7 +1352,7 @@ const ProductSection = ()=>{
                                                                     children: product.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                                                    lineNumber: 667,
+                                                                    lineNumber: 665,
                                                                     columnNumber: 29
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Card$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Card$3e$__["Card"].Text, {
@@ -1361,60 +1360,60 @@ const ProductSection = ()=>{
                                                                     children: product.desc
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                                                    lineNumber: 668,
+                                                                    lineNumber: 666,
                                                                     columnNumber: 29
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                                            lineNumber: 666,
+                                                            lineNumber: 664,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                                    lineNumber: 651,
+                                                    lineNumber: 649,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, `${i}-${idx}`, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 646,
+                                                lineNumber: 644,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, i, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 644,
+                                        lineNumber: 642,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 641,
+                                lineNumber: 639,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 640,
+                            lineNumber: 638,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 639,
+                        lineNumber: 637,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 613,
+                lineNumber: 611,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 612,
+            lineNumber: 610,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/pages/Home.tsx",
-        lineNumber: 611,
+        lineNumber: 609,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1496,7 +1495,7 @@ const HeroCarousel = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 756,
+                                                lineNumber: 754,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1504,7 +1503,7 @@ const HeroCarousel = ()=>{
                                                 children: slide.subtitle
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 757,
+                                                lineNumber: 755,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1513,33 +1512,33 @@ const HeroCarousel = ()=>{
                                                 children: slide.buttonText
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 758,
+                                                lineNumber: 756,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 755,
+                                        lineNumber: 753,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 754,
+                                    lineNumber: 752,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 753,
+                                lineNumber: 751,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 752,
+                            lineNumber: 750,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, slide.id, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 747,
+                        lineNumber: 745,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1548,7 +1547,7 @@ const HeroCarousel = ()=>{
                     children: "‹"
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 772,
+                    lineNumber: 770,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1557,18 +1556,18 @@ const HeroCarousel = ()=>{
                     children: "›"
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 775,
+                    lineNumber: 773,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 745,
+            lineNumber: 743,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/pages/Home.tsx",
-        lineNumber: 744,
+        lineNumber: 742,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1642,7 +1641,7 @@ const TestimonialsSection = ()=>{
                                 children: "People trust other buyers more than marketing text."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 847,
+                                lineNumber: 845,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1650,18 +1649,18 @@ const TestimonialsSection = ()=>{
                                 children: "Build trust through real user feedback"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 850,
+                                lineNumber: 848,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 846,
+                        lineNumber: 844,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 845,
+                    lineNumber: 843,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Row$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Row$3e$__["Row"], {
@@ -1694,12 +1693,12 @@ const TestimonialsSection = ()=>{
                                                                     className: "img-fluid rounded testimonial-img"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                                                    lineNumber: 881,
+                                                                    lineNumber: 879,
                                                                     columnNumber: 31
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                                lineNumber: 879,
+                                                                lineNumber: 877,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Card$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Card$3e$__["Card"].Body, {
@@ -1710,7 +1709,7 @@ const TestimonialsSection = ()=>{
                                                                         children: testimonial.text
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                                        lineNumber: 889,
+                                                                        lineNumber: 887,
                                                                         columnNumber: 31
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -1723,7 +1722,7 @@ const TestimonialsSection = ()=>{
                                                                         }
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                                        lineNumber: 893,
+                                                                        lineNumber: 891,
                                                                         columnNumber: 31
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
@@ -1734,65 +1733,65 @@ const TestimonialsSection = ()=>{
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                                        lineNumber: 899,
+                                                                        lineNumber: 897,
                                                                         columnNumber: 31
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                                lineNumber: 888,
+                                                                lineNumber: 886,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 878,
+                                                        lineNumber: 876,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                                    lineNumber: 875,
+                                                    lineNumber: 873,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, testimonial.id, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 869,
+                                                lineNumber: 867,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 867,
+                                        lineNumber: 865,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, groupIndex, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 866,
+                                    lineNumber: 864,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 858,
+                            lineNumber: 856,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 857,
+                        lineNumber: 855,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 856,
+                    lineNumber: 854,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 844,
+            lineNumber: 842,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/pages/Home.tsx",
-        lineNumber: 843,
+        lineNumber: 841,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1818,17 +1817,17 @@ const NewsletterSection = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 927,
+                                lineNumber: 925,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 926,
+                            lineNumber: 924,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 925,
+                        lineNumber: 923,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -1849,7 +1848,7 @@ const NewsletterSection = ()=>{
                                             children: "Grow Your Own Mushrooms at Home"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 945,
+                                            lineNumber: 943,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1857,7 +1856,7 @@ const NewsletterSection = ()=>{
                                             children: "Discover our best-selling mushroom grow kits — easy to use, beginner-friendly, and 100% organic. Start your home cultivation journey today! Experience the joy of harvesting fresh mushrooms"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 949,
+                                            lineNumber: 947,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1867,49 +1866,49 @@ const NewsletterSection = ()=>{
                                                 children: "Reach out"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 956,
+                                                lineNumber: 954,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 955,
+                                            lineNumber: 953,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 943,
+                                    lineNumber: 941,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 939,
+                                lineNumber: 937,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 938,
+                            lineNumber: 936,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 937,
+                        lineNumber: 935,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 923,
+                lineNumber: 921,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/pages/Home.tsx",
-            lineNumber: 922,
+            lineNumber: 920,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/pages/Home.tsx",
-        lineNumber: 921,
+        lineNumber: 919,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1919,7 +1918,7 @@ const Home = ()=>{
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HeroCarousel, {}, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 976,
+                lineNumber: 974,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1935,7 +1934,7 @@ const Home = ()=>{
                                         children: "Our four promises to you for quality and freshness."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 983,
+                                        lineNumber: 981,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1943,18 +1942,18 @@ const Home = ()=>{
                                         children: "Fresh, Safe & Straight to You"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 984,
+                                        lineNumber: 982,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 982,
+                                lineNumber: 980,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 981,
+                            lineNumber: 979,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Row$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Row$3e$__["Row"], {
@@ -1970,12 +1969,12 @@ const Home = ()=>{
                                                 alt: "Fresh & Organic"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 990,
+                                                lineNumber: 988,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 989,
+                                            lineNumber: 987,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -1983,7 +1982,7 @@ const Home = ()=>{
                                             children: "Fresh & Organic"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 992,
+                                            lineNumber: 990,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1991,13 +1990,13 @@ const Home = ()=>{
                                             children: "No Chemicals, Just Nature"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 993,
+                                            lineNumber: 991,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 988,
+                                    lineNumber: 986,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -2011,12 +2010,12 @@ const Home = ()=>{
                                                 alt: "IoT Monitored"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 998,
+                                                lineNumber: 996,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 997,
+                                            lineNumber: 995,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -2024,7 +2023,7 @@ const Home = ()=>{
                                             children: "IoT Monitored"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1000,
+                                            lineNumber: 998,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2032,13 +2031,13 @@ const Home = ()=>{
                                             children: "Every Mushroom Grown Under Ideal Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1001,
+                                            lineNumber: 999,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 996,
+                                    lineNumber: 994,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -2052,12 +2051,12 @@ const Home = ()=>{
                                                 alt: "Direct to You"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1006,
+                                                lineNumber: 1004,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1005,
+                                            lineNumber: 1003,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -2065,7 +2064,7 @@ const Home = ()=>{
                                             children: "Direct to You"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1008,
+                                            lineNumber: 1006,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2073,13 +2072,13 @@ const Home = ()=>{
                                             children: "Farm-to-door delivery without middlemen."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1009,
+                                            lineNumber: 1007,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 1004,
+                                    lineNumber: 1002,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -2093,12 +2092,12 @@ const Home = ()=>{
                                                 alt: "Easy Grow Kits"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1014,
+                                                lineNumber: 1012,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1013,
+                                            lineNumber: 1011,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -2106,7 +2105,7 @@ const Home = ()=>{
                                             children: "Easy Grow Kits"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1016,
+                                            lineNumber: 1014,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2114,35 +2113,35 @@ const Home = ()=>{
                                             children: "Grow mushrooms at home in 15 days."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/Home.tsx",
-                                            lineNumber: 1017,
+                                            lineNumber: 1015,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 1012,
+                                    lineNumber: 1010,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/Home.tsx",
-                            lineNumber: 987,
+                            lineNumber: 985,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 980,
+                    lineNumber: 978,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 979,
+                lineNumber: 977,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProductSection, {}, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1025,
+                lineNumber: 1023,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Container$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Container$3e$__["Container"], {
@@ -2165,7 +2164,7 @@ const Home = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 1032,
+                                lineNumber: 1030,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2173,7 +2172,7 @@ const Home = ()=>{
                                 children: "Grow with Confidence"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 1033,
+                                lineNumber: 1031,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2181,7 +2180,7 @@ const Home = ()=>{
                                 children: "Discover our best selling mushroom grow kits -easy to use, beginner-friendly, and 100% organic. Start your home cultivation journey today! Experience the joy of harvesting fresh mushrooms right from your kitchen."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 1036,
+                                lineNumber: 1034,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2190,33 +2189,33 @@ const Home = ()=>{
                                 children: "We're Here to Help"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 1037,
+                                lineNumber: 1035,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 1031,
+                        lineNumber: 1029,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 1029,
+                    lineNumber: 1027,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1028,
+                lineNumber: 1026,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PromisesSection, {}, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1046,
+                lineNumber: 1044,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FavouriteProducts, {}, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1049,
+                lineNumber: 1047,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2234,12 +2233,12 @@ const Home = ()=>{
                                     className: "img-fluid rounded w-100 iot-image"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/Home.tsx",
-                                    lineNumber: 1057,
+                                    lineNumber: 1055,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 1056,
+                                lineNumber: 1054,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Col$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Col$3e$__["Col"], {
@@ -2250,7 +2249,7 @@ const Home = ()=>{
                                         children: "We combine cutting edge IoT technology with natural cultivation to grow healthier, fresher mushrooms."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 1066,
+                                        lineNumber: 1064,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2258,7 +2257,7 @@ const Home = ()=>{
                                         children: "Smart Farming Powered by IoT & Nature"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 1069,
+                                        lineNumber: 1067,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2270,7 +2269,7 @@ const Home = ()=>{
                                                 className: "img-sizes me-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1075,
+                                                lineNumber: 1073,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2280,7 +2279,7 @@ const Home = ()=>{
                                                         children: "24/7 Monitoring"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 1077,
+                                                        lineNumber: 1075,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2288,19 +2287,19 @@ const Home = ()=>{
                                                         children: "Sensors track temperature, humidity, CO₂, and light to maintain perfect growth conditions."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 1078,
+                                                        lineNumber: 1076,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1076,
+                                                lineNumber: 1074,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 1074,
+                                        lineNumber: 1072,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2312,7 +2311,7 @@ const Home = ()=>{
                                                 className: "img-sizes me-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1086,
+                                                lineNumber: 1084,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2322,7 +2321,7 @@ const Home = ()=>{
                                                         children: "Automated Adjustments"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 1088,
+                                                        lineNumber: 1086,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2330,19 +2329,19 @@ const Home = ()=>{
                                                         children: "IoT systems instantly regulate climate and airflow, removing guesswork and ensuring consistency."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 1089,
+                                                        lineNumber: 1087,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1087,
+                                                lineNumber: 1085,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 1085,
+                                        lineNumber: 1083,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2354,7 +2353,7 @@ const Home = ()=>{
                                                 className: "img-sizes me-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1097,
+                                                lineNumber: 1095,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2364,7 +2363,7 @@ const Home = ()=>{
                                                         children: "Healthier, Faster Growth"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 1099,
+                                                        lineNumber: 1097,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2372,57 +2371,57 @@ const Home = ()=>{
                                                         children: "Controlled environments reduce contamination risk and boost yield quality."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                                        lineNumber: 1100,
+                                                        lineNumber: 1098,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                                lineNumber: 1098,
+                                                lineNumber: 1096,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/Home.tsx",
-                                        lineNumber: 1096,
+                                        lineNumber: 1094,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/Home.tsx",
-                                lineNumber: 1065,
+                                lineNumber: 1063,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/Home.tsx",
-                        lineNumber: 1054,
+                        lineNumber: 1052,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/Home.tsx",
-                    lineNumber: 1053,
+                    lineNumber: 1051,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1052,
+                lineNumber: 1050,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TestimonialsSection, {}, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1111,
+                lineNumber: 1109,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NewsletterSection, {}, void 0, false, {
                 fileName: "[project]/src/components/pages/Home.tsx",
-                lineNumber: 1113,
+                lineNumber: 1111,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/pages/Home.tsx",
-        lineNumber: 973,
+        lineNumber: 971,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

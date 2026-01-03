@@ -1,51 +1,75 @@
-"use client";
-
-import { AuthProvider } from '../context/AuthContext';
-import { CartProvider } from '../context/CartContext';
+import type { Metadata } from 'next';
+import ClientLayout from '../components/ClientLayout';
 import '../index.css';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
-import ScrollToTop from '../components/ScrollToTop';
-import { usePathname } from 'next/navigation';
 
-export default function RootLayout({ children }) {
-    const pathname = usePathname();
+export const metadata: Metadata = {
+    title: {
+        default: 'Myco Matrix - Premium Mushroom Products & IoT Monitoring',
+        template: '%s | Myco Matrix',
+    },
+    description: 'Discover premium mushroom products and IoT monitoring solutions. Fresh, organic mushrooms grown with cutting-edge technology.',
+    keywords: 'mushroom products, IoT farming, organic mushrooms, smart agriculture, mushroom cultivation',
+    authors: [{ name: 'Myco Matrix' }],
+    creator: 'Myco Matrix',
+    publisher: 'Myco Matrix',
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false,
+    },
+    metadataBase: new URL('https://mycomatrix.in'),
+    alternates: {
+        canonical: '/',
+    },
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://mycomatrix.in',
+        siteName: 'Myco Matrix',
+        title: 'Myco Matrix - Premium Mushroom Products & IoT Monitoring',
+        description: 'Discover premium mushroom products and IoT monitoring solutions.',
+        images: [
+            {
+                url: '/assets/hero.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Myco Matrix Premium Mushroom Products',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Myco Matrix - Premium Mushroom Products',
+        description: 'Discover premium mushroom products and IoT monitoring solutions.',
+        images: ['/assets/hero.jpg'],
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    icons: {
+        icon: [
+            { url: '/assets/logo.png', type: 'image/png' },
+        ],
+        shortcut: '/assets/logo.png',
+        apple: '/assets/logo.png',
+    },
+};
 
-    const isRegisterPage = pathname === '/register';
-    const isLoginPage = pathname === '/login';
-    const isForgotPasswordPage = pathname === '/forgot-password';
-    const isResetPasswordPage = pathname?.startsWith('/reset-password');
-    const isCheckoutPage = pathname === '/checkout';
-    const isAdminDashboardPage = pathname === '/admin-dashboard';
-    const isUserDashboardPage = pathname === '/user-dashboard';
-    const isIoTMonitoringPage = pathname === '/admin/iot-monitoring' || pathname === '/user/iot-monitoring' || pathname?.startsWith('/room/');
-    const isProductOrderPage = pathname === '/admin/product-order' || pathname === '/user/product-order';
-    const isAccountsPage = pathname === '/accounts';
-    const isSettingsPage = pathname === '/settings';
-    const isPaymentHistoryPage = pathname === '/payment-history';
-    const isProfilePage = pathname === '/profile';
-    const isUserPaymentsPage = pathname === '/user-payments';
-    const isRoomDetailPage = pathname?.startsWith('/room/') && !pathname?.startsWith('/room/add');
-    const isAddRoomPage = pathname === '/add-room' || pathname === '/room/add';
-
-    const hideFooter = isRegisterPage || isLoginPage || isForgotPasswordPage || isResetPasswordPage || isCheckoutPage || isAdminDashboardPage || isUserDashboardPage || isIoTMonitoringPage || isProductOrderPage || isAccountsPage || isSettingsPage || isPaymentHistoryPage || isProfilePage || isUserPaymentsPage || isRoomDetailPage || isAddRoomPage;
-    const hideHeader = isAdminDashboardPage || isUserDashboardPage || isIoTMonitoringPage || isProductOrderPage || isAccountsPage || isSettingsPage || isPaymentHistoryPage || isProfilePage || isUserPaymentsPage || isRoomDetailPage || isAddRoomPage;
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
-            <body>
-                <AuthProvider>
-                    <CartProvider>
-                        {!hideHeader && <Header />}
-                        <WhatsAppButton />
-                        <ScrollToTop />
-                        {children}
-                        {!hideFooter && <Footer />}
-                    </CartProvider>
-                </AuthProvider>
+        <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+            <body suppressHydrationWarning>
+                <ClientLayout>{children}</ClientLayout>
             </body>
         </html>
     );

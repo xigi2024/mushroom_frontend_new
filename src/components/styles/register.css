@@ -3,9 +3,9 @@
   justify-content: center;
   align-items: center;
   overflow: hidden; /* scroll completely off */
-  max-width: 1200px;
+  max-width: 1000px;
   margin:0 auto;
-  margin-top: 80px;
+  margin-top: 50px;
   border-right: 1px solid #ddd;
 }
 

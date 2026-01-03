@@ -117,10 +117,24 @@ const Login = () => {
         // Navigate to home page after a short delay
         setTimeout(() => {
           console.log('🏠 Redirecting to home page');
-          if (result.user.role === "admin") {
-            navigate.replace("/admin-dashboard");
+          
+          // Check if there's a redirect URL saved (e.g., from cart or protected route)
+          const redirectAfterLogin = typeof window !== 'undefined' 
+            ? sessionStorage.getItem('redirectAfterLogin') || localStorage.getItem('redirectAfterLogin')
+            : null;
+          
+          if (redirectAfterLogin && redirectAfterLogin !== '/login' && redirectAfterLogin !== '/register') {
+            // Clear the redirect URL
+            if (typeof window !== 'undefined') {
+              sessionStorage.removeItem('redirectAfterLogin');
+              localStorage.removeItem('redirectAfterLogin');
+            }
+            console.log('📍 Redirecting to saved URL:', redirectAfterLogin);
+            navigate.replace(redirectAfterLogin);
           } else {
-            navigate.replace("/user-dashboard");
+            // Always redirect to home page
+            console.log('🏠 Redirecting to home page');
+            navigate.replace("/");
           }
         }, hasGuestItems ? 2000 : 1000); // Longer delay if there were items to sync
 
@@ -144,7 +158,7 @@ const Login = () => {
   };
 
   return (
-    <Container className="login-container top pt-5">
+    <Container className="login-container top pt-3">
       <ToastContainer position="top-right" autoClose={5000} />
 
       <Row className="login-card shadow p-0">

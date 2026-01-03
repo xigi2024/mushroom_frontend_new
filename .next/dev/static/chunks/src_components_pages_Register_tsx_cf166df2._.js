@@ -64,7 +64,7 @@ const Register = ()=>{
         }
         setIsSubmitting(true);
         try {
-            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("https://mycomatrix.in/api/register/", {
+            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("dhttps://mycomatrix.in/api/register/", {
                 first_name: formData.first_name,
                 last_name: formData.last_name,
                 email: formData.email,

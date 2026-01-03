@@ -1,6 +1,6 @@
 /* [project]/src/components/styles/login.css [app-client] (css) */
 .login-container {
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 .login-card {
@@ -37,7 +37,7 @@
 }
 
 .login-image {
-  height: 500px;
+  height: 480px;
 }
 
 @media (max-width: 767px) {

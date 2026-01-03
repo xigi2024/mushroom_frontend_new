@@ -91,6 +91,17 @@ const OrderSuccess = () => {
                             </Card.Body>
                         </Card>
 
+                        {/* Contact Message */}
+                        <Alert variant="info" className="text-center mb-4" style={{ backgroundColor: '#e7f3ff', borderColor: '#b3d9ff' }}>
+                            <div className="d-flex flex-column align-items-center">
+                                <FaCheckCircle className="mb-2 text-info" size={24} />
+                                <strong className="mb-2">We will contact you soon!</strong>
+                                <p className="mb-0" style={{ fontSize: '0.95rem' }}>
+                                    Our team will reach out to you regarding your order confirmation and delivery details.
+                                </p>
+                            </div>
+                        </Alert>
+
                         <div className="d-flex justify-content-center gap-3">
                             <Button variant="outline-primary" onClick={() => router.push('/')}>
                                 <FaHome className="me-2" /> Return Home

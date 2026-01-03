@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Navbar as BSNavbar, Nav, Container, Row, Col, Dropdown } from 'react-bootstrap';
 import { ShoppingCart, Home, Package, Info, Phone, User, LogOut, LayoutDashboard } from 'lucide-react';
+import { FaYoutube, FaInstagram } from 'react-icons/fa';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import "./styles/header.css";
@@ -44,12 +45,12 @@ const Header = () => {
         <Container>
           <Row className="align-items-center">
             <Col md={3} className="d-none d-md-block">
-              <div className="d-flex align-items-center top-text">
-                <a href="https://www.instagram.com/myco_matrix_mushroom?utm_source=qr&igsh=YWE2cnNmd3NxNGhw" target="_blank" rel="noopener noreferrer" className="text-white me-3 text-decoration-none">
-                  <i className="fab fa-instagram"></i>
+              <div className="d-flex align-items-center top-text gap-3">
+                <a href="https://www.instagram.com/myco_matrix_mushroom?utm_source=qr&igsh=YWE2cnNmd3NxNGhw" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none">
+                  <FaInstagram size={20} />
                 </a>
-                <a href="https://www.youtube.com/@mycomatrix" target="_blank" rel="noopener noreferrer" className="text-white me-3 text-decoration-none">
-                  <i className="fab fa-youtube"></i>
+                <a href="https://www.youtube.com/@mycomatrix" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none">
+                  <FaYoutube size={20} />
                 </a>
               </div>
             </Col>

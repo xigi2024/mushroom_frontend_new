@@ -92,16 +92,17 @@ const Sidebar = ({ activeSection, setActiveSection, userRole: propUserRole }: Si
   };
 
   const handleLogout = () => {
+    // Clear all auth-related data
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
     localStorage.removeItem('user');
     localStorage.removeItem('userRole');
 
-    // optional: remove guest cart
+    // Clear guest cart
     localStorage.removeItem('guest_cart');
 
-    router.push('/login');
-    window.location.reload(); // Force UI reset
+    // Redirect to home page and force reload to update header
+    window.location.href = '/';
   };
 
 
@@ -174,14 +175,18 @@ const Sidebar = ({ activeSection, setActiveSection, userRole: propUserRole }: Si
 
         <div className="sidebar-menu">
           {sidebarItems.map(item => (
-            <div
+            <Link
               key={item.id}
+              href={item.path}
               className={`sidebar-item ${activeSection === item.id ? 'active' : ''}`}
-              onClick={() => handleNavigation(item)}
+              onClick={() => {
+                setActiveSection(item.id);
+                setIsMobileMenuOpen(false);
+              }}
             >
               <item.icon className="sidebar-icon" />
               <span>{item.label}</span>
-            </div>
+            </Link>
           ))}
         </div>
 

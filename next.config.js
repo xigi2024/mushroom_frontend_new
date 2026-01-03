@@ -10,6 +10,13 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,
   },
+  // Production optimizations
+  compress: true,
+  poweredByHeader: false,
+  // Fix for HTTP2 protocol errors
+  httpAgentOptions: {
+    keepAlive: true,
+  },
 };
 
 export default nextConfig;

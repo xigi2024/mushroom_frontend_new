@@ -78,7 +78,7 @@ const Register = () => {
     setIsSubmitting(true);
 
     try {
-      const res = await axios.post("https://mycomatrix.in/api/register/", {
+      const res = await axios.post("dhttps://mycomatrix.in/api/register/", {
         first_name: formData.first_name,
         last_name: formData.last_name,
         email: formData.email,

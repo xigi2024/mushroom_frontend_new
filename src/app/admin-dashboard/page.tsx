@@ -1,14 +1,16 @@
-"use client";
+import type { Metadata } from 'next';
 import AdminDashboard from '../../components/pages/AdminDashboard';
-import Layout from '../../components/Layout';
-import ProtectedRoute from '../../components/ProtectedRoute';
+
+export const metadata: Metadata = {
+    title: 'Admin Dashboard',
+    robots: {
+        index: false,
+        follow: false,
+        noarchive: true,
+        nosnippet: true,
+    },
+};
 
 export default function AdminDashboardPage() {
-    return (
-        <ProtectedRoute>
-            <Layout activeSection="dashboard" setActiveSection={() => { }} userRole="admin">
-                <AdminDashboard />
-            </Layout>
-        </ProtectedRoute>
-    );
+    return <AdminDashboard />;
 }

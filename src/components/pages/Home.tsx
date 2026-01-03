@@ -450,8 +450,6 @@ const ProductSection = () => {
         setLoading(true);
         const response = await axios.get("https://mycomatrix.in/api/category/");
 
-        console.log("API Response:", response.data); // Debug log
-
         // API response structure check
         let categories = [];
 

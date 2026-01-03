@@ -50,16 +50,50 @@ __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$c
 
 __turbopack_context__.s([
     "default",
-    ()=>AboutPage
+    ()=>AboutPage,
+    "metadata",
+    ()=>metadata
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$About__us$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/pages/About us.tsx [app-rsc] (ecmascript)");
 ;
 ;
+const metadata = {
+    title: 'About Us - Myco Matrix | Premium Mushroom Products & IoT Farming',
+    description: 'Learn about Myco Matrix - IoT-powered mushroom cultivation. We combine cutting-edge technology with natural farming to deliver fresh, organic mushrooms directly to your door.',
+    keywords: 'mushroom farming, IoT agriculture, organic mushrooms, smart farming, mushroom cultivation, IoT sensors, automated farming',
+    openGraph: {
+        title: 'About Us - Myco Matrix',
+        description: 'Learn about Myco Matrix - IoT-powered mushroom cultivation. We combine cutting-edge technology with natural farming.',
+        url: 'https://mycomatrix.in/about',
+        siteName: 'Myco Matrix',
+        images: [
+            {
+                url: 'https://mycomatrix.in/assets/about-main.png',
+                width: 1200,
+                height: 630,
+                alt: 'Myco Matrix Mushroom Farm'
+            }
+        ],
+        locale: 'en_US',
+        type: 'website'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'About Us - Myco Matrix',
+        description: 'Learn about Myco Matrix - IoT-powered mushroom cultivation.',
+        images: [
+            'https://mycomatrix.in/assets/about-main.png'
+        ]
+    },
+    alternates: {
+        canonical: 'https://mycomatrix.in/about'
+    }
+};
 function AboutPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$About__us$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
         fileName: "[project]/src/app/about/page.tsx",
-        lineNumber: 4,
+        lineNumber: 36,
         columnNumber: 12
     }, this);
 }

@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+Allow: /products
+Allow: /about
+Allow: /contact
+Allow: /shipping-policy
+Allow: /refund-policy
+Allow: /privacy-policy
+Allow: /terms-conditions
+Disallow: /admin/
+Disallow: /api/
+Disallow: /user-dashboard
+Disallow: /admin-dashboard
+Disallow: /admin/iot-monitoring
+Disallow: /admin/product-order
+Disallow: /user/iot-monitoring
+Disallow: /user/product-order
+Disallow: /checkout
+Disallow: /cart
+Disallow: /accounts
+Disallow: /settings
+Disallow: /profile
+Disallow: /payment-history
+Disallow: /user-payments
+Disallow: /room/
+Disallow: /add-room
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /order-success
+
+Sitemap: https://mycomatrix.in/sitemap.xml
+

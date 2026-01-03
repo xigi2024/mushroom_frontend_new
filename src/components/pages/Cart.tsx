@@ -135,33 +135,60 @@ const Cart = () => {
                     <tr key={item.id || `${(product as any).id}_${Date.now()}`}>
                       <td>
                         <div className="d-flex align-items-center">
-                          {/* ✅ FIXED: Both use same URL format */}
+                          {/* ✅ FIXED: Image URL handling - supports both relative and absolute paths */}
                           <div
-                            onClick={() => navigate.push(`/product/${(product as any).category}/${(product as any).id}`)}
+                            onClick={() => navigate.push(`/product/${(product as any).category || item.product?.category}/${(product as any).id || item.product?.id}`)}
                             style={{ cursor: 'pointer' }}
                           >
                             <Image
-                              src={(product as any).image ? `https://mycomatrix.in${(product as any).image}` : ((product as any).images?.[0]?.image ? `https://mycomatrix.in${(product as any).images[0].image}` : 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product')}
+                              src={(() => {
+                                // Get image from product object
+                                let imageUrl = (product as any).image || (product as any).images?.[0]?.image;
+                                
+                                // If no image found, try item.product
+                                if (!imageUrl) {
+                                  imageUrl = item.product?.image || item.product?.images?.[0]?.image;
+                                }
+                                
+                                // If still no image, use placeholder
+                                if (!imageUrl) {
+                                  return 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product';
+                                }
+                                
+                                // If image is already a full URL, return as is
+                                if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+                                  return imageUrl;
+                                }
+                                
+                                // If image starts with /, prepend domain
+                                if (imageUrl.startsWith('/')) {
+                                  return `https://mycomatrix.in${imageUrl}`;
+                                }
+                                
+                                // Otherwise, prepend domain with /
+                                return `https://mycomatrix.in/${imageUrl}`;
+                              })()}
                               width="60"
                               height="60"
                               className="me-3 rounded"
-                              style={{ objectFit: 'cover' }}
+                              style={{ objectFit: 'cover', minWidth: '60px', minHeight: '60px' }}
+                              alt={(product as any).name || item.product?.name || 'Product'}
                               onError={(e) => {
                                 (e.target as HTMLImageElement).src = 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product';
                               }}
                             />
                           </div>
                           <div>
-                            {/* ✅ FIXED: Same URL format as image */}
+                            {/* ✅ FIXED: Product name and navigation */}
                             <div
                               className="fw-semibold"
-                              onClick={() => navigate.push(`/product/${(product as any).category}/${(product as any).id}`)}
+                              onClick={() => navigate.push(`/product/${(product as any).category || item.product?.category}/${(product as any).id || item.product?.id}`)}
                               style={{ cursor: 'pointer' }}
                             >
-                              {(product as any).name || 'Unknown Product'}
+                              {(product as any).name || item.product?.name || 'Unknown Product'}
                             </div>
-                            {(product as any).size && (
-                              <small className="text-muted">Size: {(product as any).size}</small>
+                            {((product as any).size || item.product?.size) && (
+                              <small className="text-muted">Size: {(product as any).size || item.product?.size}</small>
                             )}
                           </div>
                         </div>

@@ -264,6 +264,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     localStorage.removeItem("access_token");
     localStorage.removeItem("refresh_token");
     localStorage.removeItem("user");
+    localStorage.removeItem("userRole");
+    
+    // Clear guest cart
+    localStorage.removeItem("guest_cart");
 
     // Reset state
     setUser(null);
@@ -274,8 +278,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     // Clear axios headers
     delete axios.defaults.headers.common["Authorization"];
 
-    // Navigate to login and force a full page reload to clear any cached data
-    window.location.href = '/login';
+    // Navigate to home page and force a full page reload to clear any cached data
+    window.location.href = '/';
   };
 
   // 🟢 Auto logout on 401
