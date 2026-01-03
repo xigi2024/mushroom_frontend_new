@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Table, Badge, ProgressBar, Button, Spinner } from 'react-bootstrap';
 import { FiPackage, FiHome, FiTrendingUp, FiUsers, FiThermometer, FiDroplet, FiAlertTriangle } from 'react-icons/fi';

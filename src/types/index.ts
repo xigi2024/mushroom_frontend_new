@@ -27,6 +27,8 @@ export interface Product {
     image?: string;
     category?: string;
     stock?: number;
+    images?: { image: string }[];
+    size?: string;
 }
 
 export interface CartItem {

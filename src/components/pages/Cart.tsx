@@ -144,27 +144,27 @@ const Cart = () => {
                               src={(() => {
                                 // Get image from product object
                                 let imageUrl = (product as any).image || (product as any).images?.[0]?.image;
-                                
+
                                 // If no image found, try item.product
                                 if (!imageUrl) {
-                                  imageUrl = item.product?.image || item.product?.images?.[0]?.image;
+                                  imageUrl = item.product?.image || (item.product as any)?.images?.[0]?.image;
                                 }
-                                
+
                                 // If still no image, use placeholder
                                 if (!imageUrl) {
                                   return 'https://via.placeholder.com/100x100/28a745/ffffff?text=Product';
                                 }
-                                
+
                                 // If image is already a full URL, return as is
                                 if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
                                   return imageUrl;
                                 }
-                                
+
                                 // If image starts with /, prepend domain
                                 if (imageUrl.startsWith('/')) {
                                   return `https://mycomatrix.in${imageUrl}`;
                                 }
-                                
+
                                 // Otherwise, prepend domain with /
                                 return `https://mycomatrix.in/${imageUrl}`;
                               })()}
@@ -187,9 +187,12 @@ const Cart = () => {
                             >
                               {(product as any).name || item.product?.name || 'Unknown Product'}
                             </div>
-                            {((product as any).size || item.product?.size) && (
-                              <small className="text-muted">Size: {(product as any).size || item.product?.size}</small>
-                            )}
+                     {((product as any).size || (item.product as any)?.size) && (
+  <small className="text-muted">
+    Size: {(product as any).size || (item.product as any)?.size}
+  </small>
+)}
+
                           </div>
                         </div>
                       </td>
@@ -327,18 +330,18 @@ const Cart = () => {
                     </div>
                   </div>
                 </Alert>
-            <Button
-              className="w-100 mb-3 button d-flex align-items-center justify-content-center"
-              onClick={() => {
-                if (typeof window !== 'undefined') {
-                  sessionStorage.setItem('redirectAfterLogin', '/cart');
-                }
-                navigate.push('/login');
-              }}
-            >
-              <FaSignInAlt className="me-2" />
-              Login to Save Your Cart
-            </Button>
+                <Button
+                  className="w-100 mb-3 button d-flex align-items-center justify-content-center"
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      sessionStorage.setItem('redirectAfterLogin', '/cart');
+                    }
+                    navigate.push('/login');
+                  }}
+                >
+                  <FaSignInAlt className="me-2" />
+                  Login to Save Your Cart
+                </Button>
                 <div className="text-center text-muted small">
                   Your cart will be saved temporarily in this browser.
                 </div>
